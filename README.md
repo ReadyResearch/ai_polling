@@ -1,5 +1,15 @@
 # AI Polling Data Extraction Pipeline
 
+<div align="center">
+
+## 📊 [**VIEW INTERACTIVE VISUALIZATIONS**](visualizations_grouped/index.html) 📊
+
+*Click above to explore AI public opinion trends across 40+ countries and 1000+ polling questions*
+
+---
+
+</div>
+
 A modern Python pipeline for extracting and analyzing AI public opinion polling data from PDFs and documents.
 
 ## Overview
@@ -41,13 +51,13 @@ pip install -r requirements.txt
 
 ## Configuration
 
-1. Copy `config.yaml` and set your Google API key:
-```yaml
-api:
-  google_api_key: "your-gemini-api-key"
+1. Create a `.env` file with your Google API key:
+```bash
+GOOGLE_API_KEY=your-gemini-api-key-here
 ```
 
-2. For Google Sheets integration, ensure you have Google Cloud credentials configured.
+2. The pipeline uses `config.yaml` for settings - API key is loaded from environment variable
+3. For Google Sheets integration, ensure you have Google Cloud credentials configured
 
 ## Quick Start
 
@@ -247,6 +257,41 @@ ai-polling config --edit
 - Ensure R is installed and in PATH
 - Install required R packages: `readr`, `dplyr`, `lubridate`
 - Check file permissions
+
+## Visualizations
+
+The project includes interactive visualizations of the polling data:
+
+- **Live Demo**: [View visualizations](https://michaelnoetel.github.io/ai_polling/visualizations_grouped/) *(if repo is public)*
+- **Local Access**: Open `visualizations_grouped/index.html` in your browser
+- **Overview Dashboard**: Comprehensive interactive dashboard with all question categories
+- **Individual Topics**: Separate visualizations for each question category (AI regulation, risks, job displacement, etc.)
+
+### Visualization Features
+
+- Interactive plotly charts with hover details
+- Time series analysis with trend lines
+- Country-based filtering and comparison
+- Professional styling and responsive design
+- Self-contained HTML files for easy sharing
+
+## Data Sources
+
+The pipeline has processed polling data from 25+ major organizations:
+
+- **Pew Research Center** - Multiple AI surveys 2022-2024
+- **Ipsos** - Global and US-specific AI opinion tracking
+- **AI Policy Institute** - Specialized AI governance polling
+- **YouGov** - Cross-national AI sentiment analysis
+- **Gallup** - AI workplace and societal impact studies
+- **University research** - Academic AI risk perception studies
+- **And many more...**
+
+## Project Status
+
+✅ **Complete**: Data extraction pipeline, validation, R integration, interactive visualizations
+🔧 **Active**: Ongoing data updates and visualization improvements
+📊 **Output**: 1000+ polling questions across 40+ countries and 30+ question categories
 
 ## License
 
