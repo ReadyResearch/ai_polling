@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dr Alexander Saeri">
+<meta name="author" content="Dr Michael Noetel">
+<meta name="author" content="Jessica Graham">
+
+<title>Survey Assessing Risks from Artificial Intelligence</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="sara_technical_report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="sara_technical_report_files/libs/quarto-html/quarto.js"></script>
+<script src="sara_technical_report_files/libs/quarto-html/popper.min.js"></script>
+<script src="sara_technical_report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="sara_technical_report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="sara_technical_report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="sara_technical_report_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="sara_technical_report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="sara_technical_report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="sara_technical_report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background-image: url(report_technical/banner.png);
+background-size: cover;
+      }
+</style>
+
+
+<link rel="stylesheet" href="report_technical/styles.css">
+</head>
+
+<body>
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Survey Assessing Risks from Artificial Intelligence</h1>
+            <p class="subtitle lead">Technical Report - Compiled on March 08, 2024</p>
+                      </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Affiliations</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author">Dr Alexander Saeri </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              Ready Research and The University of Queensland
+            </p>
+        </div>
+        <div class="quarto-title-meta-contents">
+      <p class="author">Dr Michael Noetel </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              Ready Research and The University of Queensland
+            </p>
+        </div>
+        <div class="quarto-title-meta-contents">
+      <p class="author">Jessica Graham </p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              The University of Queensland
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+    
+      
+      <div>
+      <div class="quarto-title-meta-heading">Doi</div>
+      <div class="quarto-title-meta-contents">
+        <p class="doi">
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4750953">SSRN: DOI forthcoming</a>
+        </p>
+      </div>
+    </div>
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary">Executive Summary</a></li>
+  <li><a href="#how-we-conducted-sara" id="toc-how-we-conducted-sara" class="nav-link" data-scroll-target="#how-we-conducted-sara">How we conducted SARA</a></li>
+  <li><a href="#what-ai-risks-are-australians-most-concerned-about" id="toc-what-ai-risks-are-australians-most-concerned-about" class="nav-link" data-scroll-target="#what-ai-risks-are-australians-most-concerned-about">What AI risks are Australians most concerned about?</a>
+  <ul class="collapse">
+  <li><a href="#australians-hold-a-wide-range-of-concerns-about-ai-with-the-greatest-concerns-focusing-on-ai-safety-trustworthiness-and-alignment-with-human-values." id="toc-australians-hold-a-wide-range-of-concerns-about-ai-with-the-greatest-concerns-focusing-on-ai-safety-trustworthiness-and-alignment-with-human-values." class="nav-link" data-scroll-target="#australians-hold-a-wide-range-of-concerns-about-ai-with-the-greatest-concerns-focusing-on-ai-safety-trustworthiness-and-alignment-with-human-values.">Australians hold a wide range of concerns about AI, with the greatest concerns focusing on AI safety, trustworthiness and alignment with human values.</a></li>
+  <li><a href="#australians-see-fake-online-content-cyber-attacks-and-loss-of-privacy-as-most-likely-to-impact-people-around-the-world-and-people-in-australia-over-the-next-10-years." id="toc-australians-see-fake-online-content-cyber-attacks-and-loss-of-privacy-as-most-likely-to-impact-people-around-the-world-and-people-in-australia-over-the-next-10-years." class="nav-link" data-scroll-target="#australians-see-fake-online-content-cyber-attacks-and-loss-of-privacy-as-most-likely-to-impact-people-around-the-world-and-people-in-australia-over-the-next-10-years.">Australians see fake online content, cyber attacks, and loss of privacy as most likely to impact people around the world and people in Australia over the next 10 years.</a></li>
+  </ul></li>
+  <li><a href="#what-are-australians-expectations-of-ai" id="toc-what-are-australians-expectations-of-ai" class="nav-link" data-scroll-target="#what-are-australians-expectations-of-ai">What are Australians expectations of AI?</a>
+  <ul class="collapse">
+  <li><a href="#australians-modestly-support-ai-development" id="toc-australians-modestly-support-ai-development" class="nav-link" data-scroll-target="#australians-modestly-support-ai-development">Australians modestly support AI development</a></li>
+  <li><a href="#australians-are-evenly-divided-on-whether-ai-will-be-positive-or-negative-overall" id="toc-australians-are-evenly-divided-on-whether-ai-will-be-positive-or-negative-overall" class="nav-link" data-scroll-target="#australians-are-evenly-divided-on-whether-ai-will-be-positive-or-negative-overall">Australians are evenly divided on whether AI will be positive or negative overall</a></li>
+  </ul></li>
+  <li><a href="#what-expectations-do-australians-have-about-ai-regulation" id="toc-what-expectations-do-australians-have-about-ai-regulation" class="nav-link" data-scroll-target="#what-expectations-do-australians-have-about-ai-regulation">What expectations do Australians have about AI regulation?</a>
+  <ul class="collapse">
+  <li><a href="#australians-want-the-government-to-prioritise-ai-safety" id="toc-australians-want-the-government-to-prioritise-ai-safety" class="nav-link" data-scroll-target="#australians-want-the-government-to-prioritise-ai-safety">Australians want the government to prioritise AI safety</a></li>
+  <li><a href="#a-strong-majority-of-australians-still-want-a-new-regulatory-body-for-ai" id="toc-a-strong-majority-of-australians-still-want-a-new-regulatory-body-for-ai" class="nav-link" data-scroll-target="#a-strong-majority-of-australians-still-want-a-new-regulatory-body-for-ai">A strong majority of Australians still want a new regulatory body for AI</a></li>
+  <li><a href="#australians-want-australia-to-lead-in-the-international-development-governance-and-regulation-of-ai" id="toc-australians-want-australia-to-lead-in-the-international-development-governance-and-regulation-of-ai" class="nav-link" data-scroll-target="#australians-want-australia-to-lead-in-the-international-development-governance-and-regulation-of-ai">Australians want Australia to lead in the international development, governance and regulation of AI</a></li>
+  <li><a href="#the-majority-of-australians-support-a-pause-on-worldwide-ai-development" id="toc-the-majority-of-australians-support-a-pause-on-worldwide-ai-development" class="nav-link" data-scroll-target="#the-majority-of-australians-support-a-pause-on-worldwide-ai-development">The majority of Australians support a pause on worldwide AI development</a></li>
+  </ul></li>
+  <li><a href="#do-australians-view-ai-as-a-catastrophic-or-existential-risk" id="toc-do-australians-view-ai-as-a-catastrophic-or-existential-risk" class="nav-link" data-scroll-target="#do-australians-view-ai-as-a-catastrophic-or-existential-risk">Do Australians view AI as a catastrophic or existential risk?</a>
+  <ul class="collapse">
+  <li><a href="#the-vast-majority-of-australians-agree-that-existential-risks-from-ai-should-be-a-global-priority" id="toc-the-vast-majority-of-australians-agree-that-existential-risks-from-ai-should-be-a-global-priority" class="nav-link" data-scroll-target="#the-vast-majority-of-australians-agree-that-existential-risks-from-ai-should-be-a-global-priority">The vast majority of Australians agree that existential risks from AI should be a global priority</a></li>
+  <li><a href="#australians-perceive-extinction-risks-from-artificial-intelligence-as-more-likely-than-pandemics-but-less-likely-than-nuclear-war-and-climate-change" id="toc-australians-perceive-extinction-risks-from-artificial-intelligence-as-more-likely-than-pandemics-but-less-likely-than-nuclear-war-and-climate-change" class="nav-link" data-scroll-target="#australians-perceive-extinction-risks-from-artificial-intelligence-as-more-likely-than-pandemics-but-less-likely-than-nuclear-war-and-climate-change">Australians perceive extinction risks from Artificial Intelligence as more likely than pandemics, but less likely than nuclear war and climate change</a></li>
+  <li><a href="#australians-think-it-is-likely-that-ai-will-become-more-intelligent-than-people" id="toc-australians-think-it-is-likely-that-ai-will-become-more-intelligent-than-people" class="nav-link" data-scroll-target="#australians-think-it-is-likely-that-ai-will-become-more-intelligent-than-people">Australians think it is likely that AI will become more intelligent than people</a></li>
+  <li><a href="#about-1-in-3-australians-think-it-is-at-least-moderately-likely-ai-will-cause-human-extinction-within-the-next-50-years" id="toc-about-1-in-3-australians-think-it-is-at-least-moderately-likely-ai-will-cause-human-extinction-within-the-next-50-years" class="nav-link" data-scroll-target="#about-1-in-3-australians-think-it-is-at-least-moderately-likely-ai-will-cause-human-extinction-within-the-next-50-years">About 1 in 3 Australians think it is at least ‘moderately likely’ AI will cause human extinction within the next 50 years</a></li>
+  </ul></li>
+  <li><a href="#how-well-do-australians-understand-ai" id="toc-how-well-do-australians-understand-ai" class="nav-link" data-scroll-target="#how-well-do-australians-understand-ai">How well do Australians understand AI?</a>
+  <ul class="collapse">
+  <li><a href="#australians-still-express-limited-familiarity-with-ai-and-mis-classify-many-services-that-use-ai" id="toc-australians-still-express-limited-familiarity-with-ai-and-mis-classify-many-services-that-use-ai" class="nav-link" data-scroll-target="#australians-still-express-limited-familiarity-with-ai-and-mis-classify-many-services-that-use-ai">Australians still express limited familiarity with AI, and mis-classify many services that use AI</a></li>
+  <li><a href="#there-is-a-broad-spectrum-of-use-of-ai-tools-among-australians" id="toc-there-is-a-broad-spectrum-of-use-of-ai-tools-among-australians" class="nav-link" data-scroll-target="#there-is-a-broad-spectrum-of-use-of-ai-tools-among-australians">There is a broad spectrum of use of AI tools among Australians</a></li>
+  <li><a href="#australians-actions-regarding-ai-are-most-influenced-by-traditional-news-media" id="toc-australians-actions-regarding-ai-are-most-influenced-by-traditional-news-media" class="nav-link" data-scroll-target="#australians-actions-regarding-ai-are-most-influenced-by-traditional-news-media">Australians’ actions regarding AI are most influenced by traditional news media</a></li>
+  </ul></li>
+  <li><a href="#implications-and-options-for-action" id="toc-implications-and-options-for-action" class="nav-link" data-scroll-target="#implications-and-options-for-action">Implications and options for action</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>📖 <a href="https://aigovernance.org.au/survey/">Read more about this survey</a>; 📄 <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4750953">View the PDF version of this report</a></p>
+<section id="acknowledgements" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h4>
+<p>We thank Professor Tim Miller and other anonymous academic and policy experts in AI for their valuable input during the development of our research questions and other aspects of the survey design process.</p>
+</section>
+<section id="declarations-of-conflict-of-interest" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored" data-anchor-id="declarations-of-conflict-of-interest">Declarations of Conflict of Interest</h4>
+<p>The authors have no conflicts to declare.</p>
+</section>
+<section id="citation" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored" data-anchor-id="citation">Citation</h4>
+<p>Saeri, A.K., Noetel, M., &amp; Graham, J (2024). <em>Survey Assessing Risks from Artificial Intelligence: Technical Report.</em> Ready Research, University of Queensland.</p>
+</section>
+<section id="funding-declaration" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored">Funding Declaration</h4>
+<p>This project was funded by the Effective Altruism Infrastructure Fund.</p>
+<section class="page-break">
+</section>
+<section id="executive-summary" class="level1" style="color: #053C45">
+<h1 style="color: #053C45">Executive Summary</h1>
+<section id="the-development-and-use-of-ai-technologies-is-accelerating.-across-2022-and-2023-new-large-scale-models-have-been-announced-monthly-and-are-achieving-increasingly-complex-and-general-tasksmaslej2023-bz-this-trend-continues-in-2024-with-google-deepmind-gemini-openai-sora-and-others." class="level5">
+<h5 class="anchored" data-anchor-id="the-development-and-use-of-ai-technologies-is-accelerating.-across-2022-and-2023-new-large-scale-models-have-been-announced-monthly-and-are-achieving-increasingly-complex-and-general-tasksmaslej2023-bz-this-trend-continues-in-2024-with-google-deepmind-gemini-openai-sora-and-others.">The development and use of AI technologies is accelerating. Across 2022 and 2023, new large-scale models have been announced monthly, and are achieving increasingly complex and general tasks<span class="citation" data-cites="Maslej2023-bz">(<a href="#ref-Maslej2023-bz" role="doc-biblioref">Maslej et al., 2023</a>)</span>; this trend continues in 2024 with Google DeepMind Gemini, OpenAI Sora, and others.</h5>
+<p>Experts in AI forecast that development of powerful AI models could lead to radical changes in wealth, health, and power on a scale comparable to the nuclear and industrial revolutions <span class="citation" data-cites="Grace2022-iv Davidson2023-kw">(<a href="#ref-Davidson2023-kw" role="doc-biblioref">Davidson, 2023</a>; <a href="#ref-Grace2022-iv" role="doc-biblioref">Grace et al., 2022</a>)</span>.</p>
+<p>Addressing the risks and harms from these changes requires effective AI governance: forming robust norms, policies, laws, processes and institutions to guide good decision-making about AI development, deployment and use <span class="citation" data-cites="Dafoe2018-la">(<a href="#ref-Dafoe2018-la" role="doc-biblioref">Dafoe, 2018</a>)</span>. Effective governance is especially crucial for managing extreme or catastrophic risks from AI that are high impact and uncertain, such as harm from misuse, accident or loss of control.</p>
+<p>Understanding public beliefs and expectations about AI risks and their possible responses is important for ensuring that the ethical, legal, and social implications of AI are addressed through effective governance. We conducted the Survey Assessing Risks from AI (SARA) to generate ‘evidence for action’, to help public and private actors make the decisions needed for safer AI development and use.</p>
+<p>This survey investigates public concerns about 14 different risks from AI, from AI being used to spread fake and harmful content online, to AI being used for the creation of biological and chemical weapons; public support for AI development and regulation; and priority governance actions to address risks from AI (with a focus on government action).</p>
+</section>
+<section class="page-break">
+<p>We found that:</p>
+<ul>
+<li><strong>Australians are concerned about diverse risks from AI</strong>
+<ul>
+<li>Of most concern: AI acting in conflict with human interests (misalignment), misuse of AI by bad actors, and technological unemployment</li>
+<li>Fake online content, cyber attacks, &amp; loss of privacy were seen as the risks most likely to impact large numbers of Australians</li>
+<li>There were mixed opinions on whether AI will be net good or bad</li>
+<li>~4 in 10 support AI development, 3 in 10 oppose</li>
+<li>~4 in 10 think AI will be net good, 4 in 10 think AI will be net harmful</li>
+</ul></li>
+<li><strong>Australians want the government to prioritise AI safety</strong>
+<ul>
+<li>#1 priority: prevent dangerous and catastrophic outcomes from AI</li>
+<li>Other priorities: endorse requiring audits to make sure AI is safe before release, &amp; requiring AI companies to be liable for harms</li>
+<li>9 in 10 Australians believe the government requires a new regulatory body for AI</li>
+</ul></li>
+<li><strong>Australians expect Australia to demonstrate international leadership in AI governance</strong>
+<ul>
+<li>8 in 10 think Australia should lead international development and governance of AI</li>
+<li>6 in 10 support a ‘pause’ on AI development</li>
+</ul></li>
+<li><strong>Australians think AI should be treated as an existential risk, like nuclear weapons and pandemics</strong>
+<ul>
+<li>8 in 10 think preventing extinction from AI should be a global priority</li>
+<li>AI was 3rd most likely cause of extinction, after nuclear war and climate change</li>
+<li>6 in 10 chance that AI will eventually become more intelligent than humans</li>
+</ul></li>
+<li><strong>Australians are becoming more familiar with AI and are using it more</strong>
+<ul>
+<li>Some applications (e.g., chatbots) are widely recognised as using AI, but others (e.g., fitness trackers) less so</li>
+<li>4 in 10 are using AI monthly or more frequently</li>
+<li>Information about AI is primarily from the news</li>
+</ul></li>
+</ul>
+</section>
+<section class="page-break">
+</section>
+</section>
+<section id="how-we-conducted-sara" class="level1" style="color: #053C45">
+<h1 style="color: #053C45">How we conducted SARA</h1>
+<section id="between-18-january-and-5-february-2024-the-university-of-queensland-surveyed-1151-adults-living-in-australia-online-using-the-qualtrics-survey-platform.-participants-were-recruited-through-the-online-research-units-panel-with-nationally-representative-quota-sampling-by-gender-age-group-and-stateterritory." class="level5">
+<h5 class="anchored" data-anchor-id="between-18-january-and-5-february-2024-the-university-of-queensland-surveyed-1151-adults-living-in-australia-online-using-the-qualtrics-survey-platform.-participants-were-recruited-through-the-online-research-units-panel-with-nationally-representative-quota-sampling-by-gender-age-group-and-stateterritory.">Between 18 January and 5 February 2024, The University of Queensland surveyed 1,151 adults living in Australia, online using the Qualtrics survey platform. Participants were recruited through the Online Research Unit’s panel, with nationally representative quota sampling by gender, age group, and state/territory.</h5>
+<p>Multilevel regression with poststratification (MRP) was used to create Australian population estimates and confidence intervals, using 2021 Census information about sex, age, state/territory, and education.</p>
+</section>
+<section id="who-completed-sara" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored" data-anchor-id="who-completed-sara">Who completed SARA?</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-age" class="anchored">
+
+<div id="octrwkspog" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#octrwkspog table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#octrwkspog thead, #octrwkspog tbody, #octrwkspog tfoot, #octrwkspog tr, #octrwkspog td, #octrwkspog th {
+  border-style: none;
+}
+
+#octrwkspog p {
+  margin: 0;
+  padding: 0;
+}
+
+#octrwkspog .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 30%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#octrwkspog .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#octrwkspog .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#octrwkspog .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#octrwkspog .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#octrwkspog .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#octrwkspog .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#octrwkspog .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#octrwkspog .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#octrwkspog .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#octrwkspog .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#octrwkspog .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#octrwkspog .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#octrwkspog .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#octrwkspog .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#octrwkspog .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#octrwkspog .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#octrwkspog .gt_row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#octrwkspog .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#octrwkspog .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#octrwkspog .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#octrwkspog .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#octrwkspog .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#octrwkspog .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#octrwkspog .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#octrwkspog .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#octrwkspog .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#octrwkspog .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#octrwkspog .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#octrwkspog .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#octrwkspog .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#octrwkspog .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#octrwkspog .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#octrwkspog .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#octrwkspog .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#octrwkspog .gt_left {
+  text-align: left;
+}
+
+#octrwkspog .gt_center {
+  text-align: center;
+}
+
+#octrwkspog .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#octrwkspog .gt_font_normal {
+  font-weight: normal;
+}
+
+#octrwkspog .gt_font_bold {
+  font-weight: bold;
+}
+
+#octrwkspog .gt_font_italic {
+  font-style: italic;
+}
+
+#octrwkspog .gt_super {
+  font-size: 65%;
+}
+
+#octrwkspog .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#octrwkspog .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#octrwkspog .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#octrwkspog .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#octrwkspog .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#octrwkspog .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#octrwkspog .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;1:  <p>Age of SARA completers</p> </caption>
+  <thead>
+    <tr class="gt_col_headings gt_spanner_row">
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;" scope="colgroup" id="How old are you?">
+        <span class="gt_column_spanner">How old are you?</span>
+      </th>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;" scope="col" id="Median">Median</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;" scope="col" id="SD">SD</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;" scope="col" id="Range">Range</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="median" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">46</td>
+<td headers="sd" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">16.44174</td>
+<td headers="range" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">18-91</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="page-break">
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-gender" class="anchored">
+
+<div id="mztpitpcbr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mztpitpcbr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mztpitpcbr thead, #mztpitpcbr tbody, #mztpitpcbr tfoot, #mztpitpcbr tr, #mztpitpcbr td, #mztpitpcbr th {
+  border-style: none;
+}
+
+#mztpitpcbr p {
+  margin: 0;
+  padding: 0;
+}
+
+#mztpitpcbr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 30%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mztpitpcbr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mztpitpcbr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mztpitpcbr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mztpitpcbr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mztpitpcbr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mztpitpcbr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mztpitpcbr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mztpitpcbr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mztpitpcbr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mztpitpcbr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mztpitpcbr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mztpitpcbr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mztpitpcbr .gt_row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mztpitpcbr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mztpitpcbr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mztpitpcbr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mztpitpcbr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mztpitpcbr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mztpitpcbr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mztpitpcbr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mztpitpcbr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mztpitpcbr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mztpitpcbr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mztpitpcbr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mztpitpcbr .gt_left {
+  text-align: left;
+}
+
+#mztpitpcbr .gt_center {
+  text-align: center;
+}
+
+#mztpitpcbr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mztpitpcbr .gt_font_normal {
+  font-weight: normal;
+}
+
+#mztpitpcbr .gt_font_bold {
+  font-weight: bold;
+}
+
+#mztpitpcbr .gt_font_italic {
+  font-style: italic;
+}
+
+#mztpitpcbr .gt_super {
+  font-size: 65%;
+}
+
+#mztpitpcbr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mztpitpcbr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mztpitpcbr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mztpitpcbr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mztpitpcbr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mztpitpcbr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mztpitpcbr .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;2:  <p>Gender of SARA completers</p> </caption>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;" scope="col" id="<em>Which gender do you identify as?</em>"><em>Which gender do you identify as?</em></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;" scope="col" id="<em>n</em>"><em>n</em></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;" scope="col" id="<em>percent</em>"><em>percent</em></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">Female</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">510</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">45%</td></tr>
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">Male</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">631</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">55%</td></tr>
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey; background-color: #D3D3D3;">Total</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey; background-color: #D3D3D3;">1141</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey; background-color: #D3D3D3;">100%</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-state" class="anchored">
+
+<div id="ldvbzslttk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ldvbzslttk table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ldvbzslttk thead, #ldvbzslttk tbody, #ldvbzslttk tfoot, #ldvbzslttk tr, #ldvbzslttk td, #ldvbzslttk th {
+  border-style: none;
+}
+
+#ldvbzslttk p {
+  margin: 0;
+  padding: 0;
+}
+
+#ldvbzslttk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 60%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ldvbzslttk .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ldvbzslttk .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ldvbzslttk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ldvbzslttk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ldvbzslttk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ldvbzslttk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ldvbzslttk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ldvbzslttk .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ldvbzslttk .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ldvbzslttk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ldvbzslttk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ldvbzslttk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ldvbzslttk .gt_row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ldvbzslttk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ldvbzslttk .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ldvbzslttk .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ldvbzslttk .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ldvbzslttk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ldvbzslttk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ldvbzslttk .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ldvbzslttk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ldvbzslttk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ldvbzslttk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ldvbzslttk .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ldvbzslttk .gt_left {
+  text-align: left;
+}
+
+#ldvbzslttk .gt_center {
+  text-align: center;
+}
+
+#ldvbzslttk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ldvbzslttk .gt_font_normal {
+  font-weight: normal;
+}
+
+#ldvbzslttk .gt_font_bold {
+  font-weight: bold;
+}
+
+#ldvbzslttk .gt_font_italic {
+  font-style: italic;
+}
+
+#ldvbzslttk .gt_super {
+  font-size: 65%;
+}
+
+#ldvbzslttk .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ldvbzslttk .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ldvbzslttk .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ldvbzslttk .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ldvbzslttk .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ldvbzslttk .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ldvbzslttk .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;3:  <p>States of SARA completers</p> </caption>
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;" scope="col" id="<em>Which Australian state or territory do you currently reside in?</em>"><em>Which Australian state or territory do you currently reside in?</em></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;" scope="col" id="<em>n</em>"><em>n</em></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;" scope="col" id="<em>percent</em>"><em>percent</em></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">Australian Capital Territory</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">20</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">2%</td></tr>
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">New South Wales</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">410</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">36%</td></tr>
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">Northern Territory</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">22</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">2%</td></tr>
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">Queensland</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">236</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">21%</td></tr>
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">South Australia</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">60</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">5%</td></tr>
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">Tasmania</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">23</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">2%</td></tr>
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">Victoria</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">259</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">23%</td></tr>
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">Western Australia</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">111</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey;">10%</td></tr>
+    <tr><td headers="category" class="gt_row gt_left" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey; background-color: #D3D3D3;">Total</td>
+<td headers="n" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey; background-color: #D3D3D3;">1141</td>
+<td headers="perc" class="gt_row gt_center" style="border-top-width: 1px; border-top-style: solid; border-top-color: lightgrey; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: lightgrey; border-left-width: 1px; border-left-style: solid; border-left-color: lightgrey; border-right-width: 1px; border-right-style: solid; border-right-color: lightgrey; background-color: #D3D3D3;">100%</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="page-break">
+</section>
+<section id="we-analysed-the-data-using-a-new-approach-called-multiple-regression-with-post-stratification-mrp" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored" data-anchor-id="we-analysed-the-data-using-a-new-approach-called-multiple-regression-with-post-stratification-mrp">We analysed the data using a new approach called Multiple Regression with post-stratification (MRP)</h4>
+<p>MRP is a statistical technique that adjusts estimates from a sample, using known information about a target population.</p>
+<p>MRP has been used to successfully predict the overall outcome of the 2012 presidential election, despite a high level of bias in the survey sample.</p>
+<ul>
+<li><p><strong>Benefits of MRP:</strong> Improves accuracy of population estimates and quantifies error using known demographic distributions (e.g., Census)</p></li>
+<li><p><strong>Drawbacks of MRP:</strong> More complex analysis and strict data requirements. Sample and population data must be measured in the same way.</p></li>
+</ul>
+</section>
+<section id="approach-for-identifying-ai-risks" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored" data-anchor-id="approach-for-identifying-ai-risks">Approach for identifying AI risks</h4>
+<p>We scanned the academic literature for existing national and international surveys focused on public perceptions and attitudes towards AI risk.</p>
+<p>We then extracted and generated a list of 150 AI risks from the following publications identified in the literature scan:</p>
+<table class="table">
+<caption>Table 1. Reviewed sources of AI risks</caption>
+<thead>
+<tr class="header">
+<th>Authors</th>
+<th>Citation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Floridi 2018</td>
+<td>Floridi, L., Cowls, J., Beltrametti, M. et al.&nbsp;AI4People—An Ethical Framework for a Good AI Society: Opportunities, Risks, Principles, and Recommendations. Minds &amp; Machines 28, 689–707 (2018). <a href="https://doi.org/10.1007/s11023-018-9482-5" class="uri">https://doi.org/10.1007/s11023-018-9482-5</a></td>
+</tr>
+<tr class="even">
+<td>Zhang &amp; Dafoe 2019</td>
+<td>Zhang, Baobao and Dafoe, Allan, Artificial Intelligence: American Attitudes and Trends (January 9, 2019). Available at SSRN: https://ssrn.com/abstract=3312874 or http://dx.doi.org/10.2139/ssrn.3312874</td>
+</tr>
+<tr class="odd">
+<td>Selwyn 2020</td>
+<td>Selwyn, N., Gallo Cordoba, B., Andrejevic, M., &amp; Campbell, L. (2020). AI for Social Good - Australian Attitudes Toward AI and Society Report (Version 1). Monash University. https://doi.org/10.26180/13159781.v1</td>
+</tr>
+<tr class="even">
+<td>AIPI 2023</td>
+<td>The AI Policy Institute (AIPI)/YouGov survey of US voters about AI, 2023 <a href="https://drive.google.com/file/d/1BHUBQPb7LXc3OMG9Ycn5GF_M4QliGhSt/view">Source</a></td>
+</tr>
+<tr class="odd">
+<td>Gillespie 2023</td>
+<td>Gillespie, N., Lockey, S., Curtis, C., Pool, J., &amp; Akbari, A. (2023). Trust in Artificial Intelligence: A Global Study. The University of Queensland and KPMG Australia. doi: <a href="http://doi.org/10.14264/00d3c94">10.14264/00d3c94</a></td>
+</tr>
+<tr class="even">
+<td>Elicit 2023</td>
+<td>List of concepts task: “Create a list of risks from artificial intelligence” [Elicit uses a combination of scholarly search and language models to generate a list of unique concepts]</td>
+</tr>
+</tbody>
+</table>
+<section class="page-break">
+<p>We then inductively clustered the risks, aiming for at least three risks per cluster. Some of the Elicit-generated risks were of low quality, so they were excluded. <a href="https://miro.com/app/board/uXjVNIjN2Dc=/?moveToWidget=3458764574318980155&amp;cot=14">22 clusters were identified</a>, of which 13 were retained in the List of AI risks. We made the decision to retain clusters primarily on how clear and relevant they would be to the general public, and we sought to template our list of risks on the <a href="https://governanceai.github.io/US-Public-Opinion-Report-Jan-2019/apptopline.html#govchallenges">Zhang &amp; Dafoe 2019 list of AI governance challenges</a>, which was replicated in <a href="https://doi.org/10.26180/13159781.v1">Selwyn et al 2020</a>.</p>
+<p>Names and descriptions of these risks were created for inclusion in the final survey. The full list of key risks and their descriptions can be viewed in the Appendix of this report.</p>
+</section>
+<section class="page-break">
+</section>
+</section>
+<section id="what-ai-risks-are-australians-most-concerned-about" class="level1" style="color: #053C45">
+<h1 style="color: #053C45">What AI risks are Australians most concerned about?</h1>
+<p><span style="color: #011215;"> To answer this question, we asked Australians which risks from AI they were most concerned about. We also asked Australians to judge the likelihood that these risks would affect audiences of different breadths and proximity over the next 10 years. The dual assessment of concern and likelihood was included to provide a comprehensive picture of the risks Australians’ consider most pressing. Risks that are judged both highly concerning and highly likely are clear candidates for immediate action.</span></p>
+<section id="australians-hold-a-wide-range-of-concerns-about-ai-with-the-greatest-concerns-focusing-on-ai-safety-trustworthiness-and-alignment-with-human-values." class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="australians-hold-a-wide-range-of-concerns-about-ai-with-the-greatest-concerns-focusing-on-ai-safety-trustworthiness-and-alignment-with-human-values.">Australians hold a wide range of concerns about AI, with the greatest concerns focusing on AI safety, trustworthiness and alignment with human values.</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-risk-priority" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-risk-priority-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Risks from AI that most concern Australians</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">While Australians are more concerned about some risks from AI than others, <a href="#fig-risk-priority">Figure&nbsp;1</a> demonstrates that Australians are aware of and concerned about a diverse range of risks. When asked which risk from a set of 14 risks from AI were most concerning, the top risk was AI systems acting in ways that are not safe, not trustworthy, and not aligned with human values (12%), technological unemployment from AI (10%), AI-enabled cyber attacks (10%) and lethal autonomous weapons (10%).&nbsp;Lesser, yet notable, risks of concern to Australians include AI failures in critical infrastructure (9%) and diseases or biological weapons created with help from AI (8%).&nbsp;</span></p>
+<p><span style="color: #053C45;">Australians are least concerned about erosion of human rights by AI (4%), AI-assisted surveillance that violates privacy and civil liberties (3%) and bias and discrimination in decision-making by AI(2%).</span></p>
+</section>
+</section>
+<section id="australians-see-fake-online-content-cyber-attacks-and-loss-of-privacy-as-most-likely-to-impact-people-around-the-world-and-people-in-australia-over-the-next-10-years." class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="australians-see-fake-online-content-cyber-attacks-and-loss-of-privacy-as-most-likely-to-impact-people-around-the-world-and-people-in-australia-over-the-next-10-years.">Australians see fake online content, cyber attacks, and loss of privacy as most likely to impact people around the world and people in Australia over the next 10 years.</h3>
+<p><span style="color: #053C45;">Australians judge that risks from AI related to fake and harmful content, cyber attacks, data privacy and surveillance are most likely (1-1% probability) to impact large numbers of people in Australia over the next 10 years. These four risks are consistent with other Australian research; a 2020 KPMG/UQ survey found the same four risks judged as most likely to affect Australians in the near future <span class="citation" data-cites="Lockey2020-ts">(<a href="#ref-Lockey2020-ts" role="doc-biblioref">Lockey et al., 2020</a>)</span>.</span></p>
+<p><span style="color: #053C45;">None of the presented 14 risks from AI were rated as more unlikely than likely (&lt; 50%) to impact large numbers of Australians in the next decade.&nbsp;</span></p>
+<div class="cell" data-layout-align="center">
+<div id="fig-risk-likely" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-risk-likely-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Australians’ beliefs about likelihood of risks from AI affecting different audiences</figcaption>
+</figure>
+</div>
+</div>
+<section class="page-break">
+</section>
+</section>
+<section id="what-are-australians-expectations-of-ai" class="level1" style="color: #053C45">
+<h1 style="color: #053C45">What are Australians expectations of AI?</h1>
+<p><span style="color: #011215;"> To answer this question, we asked Australians how much they supported the general development of AI, and, more directly, whether they thought AI would do more good or harm overall.</span></p>
+<section id="australians-modestly-support-ai-development" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="australians-modestly-support-ai-development">Australians modestly support AI development</h3>
+<p><span style="color: #053C45;">Australians are split between supporting, being ambivalent towards, and opposing AI development. A plurality of Australians (44%) support AI development. Over a quarter of the population are ambivalent towards AI development (27%), while 29% oppose it. This result suggests a moderate tendency towards support for AI development, although a majority share of the population (56%) is either opposed or undecided.&nbsp;</span></p>
+<div class="cell" data-fig-cap-location="top">
+<div id="fig-exp-supopp" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-exp-supopp-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: Australians’ support for AI development</figcaption>
+</figure>
+</div>
+</div>
+<p><span style="color: #053C45;">Support for AI development has decreased since 2020: the same question in a Monash survey of Australians found that 57% supported the development of AI, with 28% opposed <span class="citation" data-cites="Selwyn2020-rk">(<a href="#ref-Selwyn2020-rk" role="doc-biblioref">Selwyn et al., 2020</a>)</span>.</span></p>
+<p><span style="color: #053C45;">This 13% drop in support and small rise in opposition could suggest that Australians are becoming more cautious towards AI development, possibly due to an increased awareness of risks or high-profile incidents with AI technologies. The stable and substantial rate of ambivalence suggests that there might still be a gap in understanding regarding AI’s benefits and risks, and may point to an opportunity for public engagement.</span></p>
+</section>
+<section class="page-break">
+</section>
+<section id="australians-are-evenly-divided-on-whether-ai-will-be-positive-or-negative-overall" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="australians-are-evenly-divided-on-whether-ai-will-be-positive-or-negative-overall">Australians are evenly divided on whether AI will be positive or negative overall</h3>
+<p><span style="color: #053C45;">Overall, the same number of Australians think that AI will lead to net good, as those who think AI will lead to net harm. 37% of Australians tend to think that AI will do more good than harm, while 43% tend to think that it will do more harm than good. However, a notable proportion of the public (20%) are neutral about whether AI will be a net good or net harm.</span></p>
+<p><span style="color: #053C45;">Compared with a 2020 survey of 2,444 US adults (post-stratified to be representative of the US population), Australians appear to be significantly more pessimistic about AI. The 2023 US survey estimated that 48% of Americans expect more good than harm to come from AI, while 31% expect more harm than good <span class="citation" data-cites="Elsey2023-ik">(<a href="#ref-Elsey2023-ik" role="doc-biblioref">Elsey &amp; Moss, 2023</a>)</span>.</span></p>
+<div class="cell" data-layout-align="center">
+<div id="fig-exp-harmgood" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-exp-harmgood-1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: Australians’ beliefs about whether AI will do harm or good</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="page-break">
+</section>
+</section>
+<section id="what-expectations-do-australians-have-about-ai-regulation" class="level1" style="color: #053C45">
+<h1 style="color: #053C45">What expectations do Australians have about AI regulation?</h1>
+<p><span style="color: #011215;"> We asked a number of related questions to gauge Australians’ expectations about AI regulation, including what policy actions the government should focus on, support for a new regulatory body for AI, beliefs about whether Australia should lead international AI regulation and development, and support for a pause on worldwide AI development.</span></p>
+<section id="australians-want-the-government-to-prioritise-ai-safety" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="australians-want-the-government-to-prioritise-ai-safety">Australians want the government to prioritise AI safety</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-pol-priority" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-pol-priority-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5: Australians’ AI governance priorities</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">Australians’ top priority is ‘preventing dangerous and catastrophic outcomes from AI’, with 64% of respondents selecting it as one of their top three priorities when compared against other policy options. The second most selected priority was ‘requiring mandatory audits to make sure AI is safe before release’ (47%), and the third most selected was ‘making sure AI companies are liable for the harms they cause’ (39%).&nbsp;Together, these approaches characterise the Australian public position as one focused on maximising AI safety.</span></p>
+<p><span style="color: #053C45;">Public priorities for AI policy options appear to be consistent between Australians and Americans: a recent national survey by AIPI and YouGov asked US voters to select priorities from an identical list of government actions. Americans’ top three most-selected priorities were the same as Australians <span class="citation" data-cites="noauthor_2023-sk">(<a href="#ref-noauthor_2023-sk" role="doc-biblioref"><em>The <span>AI</span> Policy Institute (<span>AIPI)/YouGov</span> Survey of <span>US</span> Voters about <span>AI</span></em>, 2023</a>)</span>.</span></p>
+</section>
+<section class="page-break">
+</section>
+<section id="a-strong-majority-of-australians-still-want-a-new-regulatory-body-for-ai" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="a-strong-majority-of-australians-still-want-a-new-regulatory-body-for-ai">A strong majority of Australians still want a new regulatory body for AI</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-pol-newauthority" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-pol-newauthority-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;6: Australians’ support for a new regulatory body to govern and promote responsible AI innovation</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">The need for improving AI governance was affirmed, with nearly 9 in 10 (86%) Australians agreeing that Australia requires a new regulatory body to govern and promote responsible AI innovation. In contrast, a much smaller proportion of Australians disagree with the need for a new regulatory body (6%), while 7% remain uncertain. This trend of very strong support has remained consistent over the last four years: a 2020 nationally-representative survey found that 87% of Australians agreed with the need to establish a new regulatory body for AI <span class="citation" data-cites="Selwyn2020-rk">(<a href="#ref-Selwyn2020-rk" role="doc-biblioref">Selwyn et al., 2020</a>)</span>. &nbsp;</span></p>
+</section>
+<section class="page-break">
+</section>
+<section id="australians-want-australia-to-lead-in-the-international-development-governance-and-regulation-of-ai" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="australians-want-australia-to-lead-in-the-international-development-governance-and-regulation-of-ai">Australians want Australia to lead in the international development, governance and regulation of AI</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-international-gov-dev" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-international-gov-dev-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;7: Australians’ belief in the importance of Australia leading international governance, regulation and development of AI</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">Australians strongly support the position that Australia, as a nation, should lead global AI development and governance. 9 in 10 Australians (94%) agreed that it was important for Australia to play a leading role in the international governance and regulation of AI. In contrast, only 6% disagreed.&nbsp;</span></p>
+<p><span style="color: #053C45;">Australians have similar expectations regarding the international development of AI: nearly 9 in 10 (87%) agreed that it was important for Australia to play a leading role, while only 13% disagreed. This finding supports other Australian research: a 2020 representative survey found that a strong majority of Australians (81%) considered it important for Australia to lead the international development of AI <span class="citation" data-cites="Selwyn2020-rk">(<a href="#ref-Selwyn2020-rk" role="doc-biblioref">Selwyn et al., 2020</a>)</span>.</span></p>
+<p><span style="color: #053C45;">These findings suggest that Australia’s leadership in AI is important to Australians and should be considered in policy decisions affecting global AI development and regulation.&nbsp;</span></p>
+</section>
+<section class="page-break">
+</section>
+<section id="the-majority-of-australians-support-a-pause-on-worldwide-ai-development" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="the-majority-of-australians-support-a-pause-on-worldwide-ai-development">The majority of Australians support a pause on worldwide AI development</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-pol-pause" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-pol-pause-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;8: Australians’ support for a 6-month pause on worldwide AI development</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">A majority of Australians (66%) support a 6-month pause on worldwide AI development. The idea of a 6-month pause on the development of the most advanced AI models has been advocated by some technology leaders who have expressed concern about AI development and use outpacing effective control, regulation, or adaptation <span class="citation" data-cites="noauthor_2023-kp"><em>Pause Giant <span>AI</span> Experiments</em> (<a href="#ref-noauthor_2023-kp" role="doc-biblioref">2023</a>)</span>. This finding suggests that Australians are concerned about the risks posed by AI, believe in the need to better comprehend AI systems, and prioritise safety and thoughtful regulation over immediate technological gains. A sizable proportion of Australians (20%) neither support nor oppose a pause. This ambivalence could be due to insufficient information or conflicting views on AI’s benefits and risks, and may represent an important opportunity for public engagement. A minority of Australians oppose the pause (14%).&nbsp;</span></p>
+<p><span style="color: #053C45;">These findings broadly support those of a previous US survey <span class="citation" data-cites="Elsey2023-ik">(<a href="#ref-Elsey2023-ik" role="doc-biblioref">Elsey &amp; Moss, 2023</a>)</span>, in which a majority of Americans were also supportive of a pause. However, Americans display a majority support that is substantially weaker (51%) than that of Australians, and greater opposition (25%).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></span></p>
+</section>
+<section class="page-break">
+</section>
+</section>
+<section id="do-australians-view-ai-as-a-catastrophic-or-existential-risk" class="level1" style="color: #053C45">
+<h1 style="color: #053C45">Do Australians view AI as a catastrophic or existential risk?</h1>
+<section id="the-vast-majority-of-australians-agree-that-existential-risks-from-ai-should-be-a-global-priority" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="the-vast-majority-of-australians-agree-that-existential-risks-from-ai-should-be-a-global-priority">The vast majority of Australians agree that existential risks from AI should be a global priority</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-pol-cais" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-pol-cais-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;9: Australians’ support for the idea that existential risks from AI should be a global priority</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">In 2023, the <a href="https://www.safe.ai/work/statement-on-ai-risk">Center for AI Safety</a> released a public statement signed by hundreds of technology leaders and AI experts that “mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war”.</span></p>
+<p><span style="color: #053C45;">A significant majority (80%) of Australians support the statement. In contrast, a much smaller proportion of Australians are neutral towards the idea (12%), while an even smaller proportion is opposed (7%) to it.</span></p>
+<p><span style="color: #053C45;">Australians are more supportive of this statement than Americans, based on a 2023 survey. Compared with Australians, Americans display a much broader distribution of opinions, with a much weaker majority in favour of the idea (58%), and a substantial minority either opposing the idea (22%) or remaining neutral (18%) <span class="citation" data-cites="Elsey2023-ik">(<a href="#ref-Elsey2023-ik" role="doc-biblioref">Elsey &amp; Moss, 2023</a>)</span>.</span></p>
+</section>
+<section class="page-break">
+</section>
+<section id="australians-perceive-extinction-risks-from-artificial-intelligence-as-more-likely-than-pandemics-but-less-likely-than-nuclear-war-and-climate-change" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="australians-perceive-extinction-risks-from-artificial-intelligence-as-more-likely-than-pandemics-but-less-likely-than-nuclear-war-and-climate-change">Australians perceive extinction risks from Artificial Intelligence as more likely than pandemics, but less likely than nuclear war and climate change</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="sara_technical_report_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="1440"></p>
+</div>
+</div>
+<p><span style="color: #053C45;">Out of the six presented extinction risks, Australians ranked AI 3rd, with 13% of respondents selecting it as the most likely cause of human extinction. A smaller proportion of participants judged either an asteroid impact (9%, ranked 4th), pandemic (8%, ranked 5th) or some other risk (7%, ranked 6th) as most likely to cause human extinction.</span></p>
+<p><span style="color: #053C45;">Consistent with American survey results <span class="citation" data-cites="Elsey2023-ik noauthor_2023-dy">(<a href="#ref-Elsey2023-ik" role="doc-biblioref">Elsey &amp; Moss, 2023</a>; <a href="#ref-noauthor_2023-dy" role="doc-biblioref"><em><span>YouGov</span> Survey</em>, 2023</a>)</span>, Australians ranked nuclear war first among the presented risks (42%), and climate change second (21%). In contrast to Australians, a much smaller proportion of Americans perceived AI as the top extinction risk when asked to select between the same six options (4%), ranking it last by a considerable margin <span class="citation" data-cites="Elsey2023-ik">(<a href="#ref-Elsey2023-ik" role="doc-biblioref">Elsey &amp; Moss, 2023</a>)</span>.</span></p>
+</section>
+<section class="page-break">
+</section>
+<section id="australians-think-it-is-likely-that-ai-will-become-more-intelligent-than-people" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="australians-think-it-is-likely-that-ai-will-become-more-intelligent-than-people">Australians think it is likely that AI will become more intelligent than people</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-exp-aivshuman" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-exp-aivshuman-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;10: Australians’ judgements of the likelihood that AI eventually becomes more intelligent than people</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">A small majority of Australians (56%) think that it is at least ‘somewhat likely: 60-80% chance’ that AI will eventually achieve greater than human intelligence, with a substantial 23% of the population judging this event as very likely (&gt;95% chance) or more. Strikingly, 9% of Australians think AI is already more intelligent than people.</span></p>
+<p><span style="color: #053C45;">The average estimate of likelihood across Australians is about 61%. Put another way, the Australian public thinks there is about a 6 in 10 chance that AI will eventually become more intelligent than people.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></span></p>
+<p><span style="color: #053C45;">These findings are in broad agreement with a similar question from a previous US survey, in which most US respondents thought AI would ultimately become more intelligent than people, and only 15% judged it as not at all likely <span class="citation" data-cites="Elsey2023-ik">(<a href="#ref-Elsey2023-ik" role="doc-biblioref">Elsey &amp; Moss, 2023</a>)</span>.</span></p>
+</section>
+<section class="page-break">
+</section>
+<section id="about-1-in-3-australians-think-it-is-at-least-moderately-likely-ai-will-cause-human-extinction-within-the-next-50-years" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="about-1-in-3-australians-think-it-is-at-least-moderately-likely-ai-will-cause-human-extinction-within-the-next-50-years">About 1 in 3 Australians think it is at least ‘moderately likely’ AI will cause human extinction within the next 50 years</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-risk-extinct-50yr" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-risk-extinct-50yr-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;11: Australians’ judgements of the likelihood that AI causes human extinction in the next 50 years</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">In general, Australians lean towards doubt about whether AI will cause human extinction within the next 50 years: the majority of respondents judged the possibility as either ‘only slightly likely’ (34%) or ‘not at all likely’ (34%). However, a substantial proportion of Australians–about a third—think AI is at least ‘moderately likely’ (32%) to cause human extinction within the next 50 years. Notably, 8% of Australians think that this outcome is ‘very likely’, while 5% think it is ‘extremely likely’. Although the minority view, these proportions represent a non-trivial subset of the population endorsing a profound assertion, given the enormity of the event and the timescale.&nbsp;For reference, superforecasters predict a 4% risk of nuclear weapons causing the death of more than 10% of humans within a 5-year period by 2100, while the median nuclear expert predicts an 8% risk.</span></p>
+<p><span style="color: #053C45;">This findings corroborates results from a previous US survey in which the majority of Americans also considered it either ‘only slightly likely’ or ‘not at all likely’ that AI would lead to extinction in the next 50 years <span class="citation" data-cites="Elsey2023-ik">(<a href="#ref-Elsey2023-ik" role="doc-biblioref">Elsey &amp; Moss, 2023</a>)</span>.</span></p>
+</section>
+<section class="page-break">
+</section>
+</section>
+<section id="how-well-do-australians-understand-ai" class="level1" style="color: #053C45">
+<h1 style="color: #053C45">How well do Australians understand AI?</h1>
+<section id="australians-still-express-limited-familiarity-with-ai-and-mis-classify-many-services-that-use-ai" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="australians-still-express-limited-familiarity-with-ai-and-mis-classify-many-services-that-use-ai">Australians still express limited familiarity with AI, and mis-classify many services that use AI</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-fam-ai" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-fam-ai-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;12: Australians’ self-reported familiarity with AI</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">As seen in <a href="#fig-fam-ai">Figure&nbsp;12</a>, the majority of Australians (77%) judge themselves to have only passing knowledge and familiarity with AI, with 16% having ‘only heard about it before’ and 61% ‘only knowing a little’ about it. In contrast, only 21% of Australians judged they ‘knew a fair bit about’ AI. The smallest proportion of Australians by far claimed they ‘knew a lot about’ AI (2%). This result is consistent with other Australian research in which self-reported familiarity with AI was low for the majority of respondents <span class="citation" data-cites="Lockey2020-ts">(<a href="#ref-Lockey2020-ts" role="doc-biblioref">Lockey et al., 2020</a>)</span>.</span></p>
+<p><span style="color: #053C45;">These findings suggest that while most Australians are aware of AI to some extent, the depth of this understanding is generally superficial, with a significant majority estimating only a basic awareness.&nbsp;</span></p>
+</section>
+<section class="page-break">
+<div class="cell" data-layout-align="center" data-fig-cap-location="top">
+<div class="cell-output-display">
+<div id="fig-fam-exampleai" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-fam-exampleai-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;13: Australians’ familiarity with specific use cases of AI</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">This question asked Australians to identify whether 10 specific technologies were examples of AI. All of the examples were examples of AI.&nbsp;</span></p>
+<p><span style="color: #053C45;">As seen in <a href="#fig-fam-exampleai">Figure&nbsp;13</a>, most Australians recognised popular consumer-facing applications, such as chatbots (82%) and self-driving cars (78%), as examples of AI. Conversely, more specialised applications, like wearable fitness trackers (48%), spam detection services (49%) and websites that recommend products based on previous purchases (54%), were least recognised by Australians as examples of AI. Overall, a sizeable proportion of Australians either mis-classified or were unsure about the classification of many examples of AI (from 19-51%). With the exception of fitness trackers and spam detection services, the majority of Australians correctly classified all examples.&nbsp;</span></p>
+<p><span style="color: #053C45;">Americans tend to recognise the same use cases of AI as Australians: in a 2023 YouGov survey of US adults, the top three correctly recognised AI applications were also chatbots (76%), self-driving cars (69%) and medical imaging tools (63%) <span class="citation" data-cites="YouGov2023-zx">(<a href="#ref-YouGov2023-zx" role="doc-biblioref">YouGov, 2023</a>)</span>.</span></p>
+<p><span style="color: #053C45;">Similarly, Americans were least able to recognise spam detection services (47%) and wearable fitness trackers (46%) as examples of AI.&nbsp;</span></p>
+</section>
+<section class="page-break">
+</section>
+<section id="there-is-a-broad-spectrum-of-use-of-ai-tools-among-australians" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="there-is-a-broad-spectrum-of-use-of-ai-tools-among-australians">There is a broad spectrum of use of AI tools among Australians</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-fam-use-aipers" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-fam-use-aipers-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;14: Self-reported frequency of Australians’ AI tool use</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">Out of the presented options, a plurality of Australians were unsure how often they use AI in their daily lives (29%). This uncertainty could suggest a lack of awareness about what constitutes AI or which tools are powered by AI. Almost half of Australians (47%) use AI multiple times per month or more. A sizable proportion (21%) of Australians have incorporated AI into their daily routines, with 13% using it daily and 8% using it multiple times per day. 10% of Australians use AI once a month or less, suggesting a sporadic reliance on AI technologies, possibly limited to specific applications or services. Lastly, 15% of Australians never use AI tools. This could be indicative of lack of access to AI tools, a lack of awareness about which interactions involve AI, or a conscious choice to avoid using AI.&nbsp;</span></p>
+<p><span style="color: #053C45;">Overall, these findings suggest that while there are a number of Australians who use AI regularly, there is also a significant proportion of the population that is either unaware of their use of AI or does not engage with AI tools at all.&nbsp;</span></p>
+<p><span style="color: #053C45;">Compared with American data from 2020, Australians broadly appear to use AI more, with 30% of Americans using AI multiple times per month or more <span class="citation" data-cites="YouGov2023-zx">(<a href="#ref-YouGov2023-zx" role="doc-biblioref">YouGov, 2023</a>)</span>.</span></p>
+<p><span style="color: #053C45;">A much larger proportion of Americans (36%) report never using AI. Slightly less Americans than Australians are unsure how often they use AI (22%). It is worth noting that the American data used in this comparison may not fully reflect current trends. The past four years have seen major AI advancements. These advancements have likely changed how often Americans use AI, possibly narrowing the previously noted gaps with Australia.</span></p>
+</section>
+<section class="page-break">
+</section>
+<section id="australians-actions-regarding-ai-are-most-influenced-by-traditional-news-media" class="level3" style="color: #0C869B">
+<h3 style="color: #0C869B" class="anchored" data-anchor-id="australians-actions-regarding-ai-are-most-influenced-by-traditional-news-media">Australians’ actions regarding AI are most influenced by traditional news media</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-infosource" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="sara_technical_report_files/figure-html/fig-infosource-1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;15: Information sources most influencing Australians’ actions regarding AI</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span style="color: #053C45;">Traditional news media such as TV, newspapers and radio influence Australians’ actions regarding AI much more than any other source of information, with a slim majority of respondents (52%) selecting it. Search engines are the next most influential source 32%. About 1 in 4 Australians are influenced by personal experience and experimentation with AI (selected by 26%). Out of the presented information sources, Australians’ actions are least influenced by friends and family (23%), social media (23%) and government websites (22%). &nbsp;</span></p>
+</section>
+<section class="page-break">
+</section>
+</section>
+<section id="implications-and-options-for-action" class="level1" style="color: #053C45">
+<h1 style="color: #053C45">Implications and options for action</h1>
+<p>Findings from SARA show that Australians are concerned about diverse risks from AI, especially catastrophic risks, and expect the Australian Government to address these through strong governance action.</p>
+<p>Australians’ ambivalence about AI and expectation of strong governance action to address risks is a consistent theme of public opinion research in this area <span class="citation" data-cites="Lockey2020-ts Gillespie2023-ag Selwyn2020-rk">(<a href="#ref-Gillespie2023-ag" role="doc-biblioref">Gillespie et al., 2023</a>; <a href="#ref-Lockey2020-ts" role="doc-biblioref">Lockey et al., 2020</a>; <a href="#ref-Selwyn2020-rk" role="doc-biblioref">Selwyn et al., 2020</a>)</span>.</p>
+<section id="australians-are-concerned-about-more-diverse-risks-from-ai-compared-to-government" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored" data-anchor-id="australians-are-concerned-about-more-diverse-risks-from-ai-compared-to-government">Australians are concerned about more diverse risks from AI, compared to Government</h4>
+<p>The Australian Government published an interim response to its Safe and Responsible AI consultation <span class="citation" data-cites="noauthor_2024-mp">(<a href="#ref-noauthor_2024-mp" role="doc-biblioref"><em>Safe and Responsible <span>AI</span> in Australia Consultation</em>, 2024</a>)</span>. As part of its interim response, the Government plans to address known risks and harms from AI by strengthening existing laws, especially in areas of privacy, online safety, and mis/disinformation.&nbsp;</p>
+<p>Findings from SARA show that some Australians are concerned about privacy, online safety, and mis/disinformation risks, so government action in these areas is a positive step. However, the risks that Australians are most concerned about are not a focus of the Government’s interim response. These priority risks include AI systems being misused or accidentally acting in ways that harm people, AI-enabled cyber attacks, and job loss due to AI. The Government must broaden its consideration of AI risks to include those identified as high priority by Australians.</p>
+</section>
+<section id="australians-want-government-to-establish-a-national-regulator-for-ai-require-pre-release-safety-audits-and-make-companies-liable-for-ai-harms" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored" data-anchor-id="australians-want-government-to-establish-a-national-regulator-for-ai-require-pre-release-safety-audits-and-make-companies-liable-for-ai-harms">Australians want Government to establish a national regulator for AI, require pre-release safety audits, and make companies liable for AI harms</h4>
+<p>The Government plans to develop a voluntary AI Safety Standard and voluntary watermarking of AI-generated materials. Findings from SARA show that Australians support stronger Government action, including mandatory audits to make sure AI is safe before release <span class="citation" data-cites="noauthor_2024-mp">(<a href="#ref-noauthor_2024-mp" role="doc-biblioref"><em>Safe and Responsible <span>AI</span> in Australia Consultation</em>, 2024</a>)</span>, and making AI companies liable for harms caused by AI <span class="citation" data-cites="Weil2024-wm">(<a href="#ref-Weil2024-wm" role="doc-biblioref">Weil, 2024</a>)</span>. Australians show strong support for a national regulatory authority for AI; this support has been consistently high since at least 2020 <span class="citation" data-cites="Selwyn2020-rk">(<a href="#ref-Selwyn2020-rk" role="doc-biblioref">Selwyn et al., 2020</a>)</span>. To meet expectations, Government should establish a national regulation for AI, and implement strong action to limit harms from AI.</p>
+</section>
+<section id="australians-want-government-action-to-prevent-dangerous-and-catastrophic-outcomes-from-frontier-models-and-general-purpose-models" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored" data-anchor-id="australians-want-government-action-to-prevent-dangerous-and-catastrophic-outcomes-from-frontier-models-and-general-purpose-models">Australians want Government action to prevent dangerous and catastrophic outcomes from frontier models and general-purpose models</h4>
+<p>In its interim response, the Government described plans to establish mandatory safeguards for ‘legitimate, high-risk settings’ to ‘ensure AI systems are safe when harms are difficult or impossible to reverse’, as well as for ‘development, deployment and use of frontier or general-purpose models’.&nbsp;</p>
+<p>Findings from SARA indicate that Australians want the government, as a #1 priority action, to prevent dangerous and catastrophic outcomes from AI. Frontier and general-purpose models carry the greatest risk for catastrophic outcomes <span class="citation" data-cites="Anderljung2023-cj">(<a href="#ref-Anderljung2023-cj" role="doc-biblioref">Anderljung et al., 2023</a>)</span>, and are also advancing in capabilities without clear safety measures. Australians believe preventing the risk of extinction from AI should be a global priority. To meet Australians’ expectations, Government must ensure it can understand and respond to emergent and novel risks from these AI models.</p>
+</section>
+<section class="page-break">
+</section>
+</section>
+<section id="appendix" class="level1" style="color: #053C45">
+<h1 style="color: #053C45">Appendix</h1>
+<section id="full-list-of-identified-risks-from-ai-and-their-descriptions" class="level4" style="color: #053C45">
+<h4 style="color: #053C45" class="anchored" data-anchor-id="full-list-of-identified-risks-from-ai-and-their-descriptions">Full list of identified risks from AI and their descriptions</h4>
+<p><strong>Loss of data privacy due to AI</strong></p>
+<p>Algorithms used in AI applications are often trained on vast amounts of personal data, including medical records, social media content, and financial transactions. Some worry that data used to train algorithms are not collected, used, and stored in ways that protect personal privacy.</p>
+<p><strong>AI being used to spread fake and harmful content online</strong></p>
+<p>AI has been used by governments, private groups, and individuals to harm or manipulate internet users. For instance, automated bots have been used to generate and spread false and/or harmful news stories, audios, and videos.</p>
+<p><strong>AI cyber attacks against governments, companies, organisations and individuals</strong></p>
+<p>Computer scientists have shown that AI can be used to launch effective cyber attacks. AI could be used to hack into servers to steal sensitive information, shut down critical infrastructures like power grids or hospital networks, or scale up targeted phishing attacks.</p>
+<p><strong>AI-assisted surveillance that violates privacy and civil liberties</strong></p>
+<p>AI can be used to process and analyse large amounts of text, photo, audio, and video data from social media, mobile communications, and CCTV cameras. Some worry that governments, companies, and employers could use AI to increase their surveillance capabilities.</p>
+<p><strong>AI systems acting in ways that are not safe, not trustworthy, and not aligned with human values</strong></p>
+<p>As AI systems become more advanced, they will increasingly make decisions without human input. One potential fear is that AI systems, while performing jobs they are programmed to do, could unintentionally make decisions that go against the values of its human users, such as physically harming people.</p>
+<p><strong>Weapons that can act without direct human control (lethal autonomous weapons)</strong></p>
+<p>Lethal autonomous weapons (LAWs) are military robots that can attack targets without control by humans. LAWs could reduce the use of human combatants on the battlefield. But some worry that the adoption of LAWs could lead to mass violence. Because they are cheap and easy to produce in bulk, national militaries, terrorists, and other groups could readily deploy LAWs.</p>
+<p><strong>AI doing the jobs of humans (technological unemployment)</strong></p>
+<p>Some forecast that AI will increasingly be able to do jobs done by humans today. AI could potentially do the jobs of blue-collar workers, like truckers and factory workers, as well as the jobs of white-collar workers, like financial analysts or lawyers. Some worry that in the future, robots and computers could do most of the jobs that are done by humans today.</p>
+<p><strong>Failure of AI that is embedded in critical infrastructure or systems (like electricity, hospitals, military)</strong></p>
+<p>As AI systems become more advanced, they could be used by the military or in critical infrastructure, like power grids, highways, or hospital networks. Some worry that the failure of AI systems or unintentional accidents in these applications could cause 10 percent or more of all humans to die.&nbsp;</p>
+<p><strong>AI being used in an international arms race</strong></p>
+<p>Countries are investing billions of dollars to develop powerful AI systems for surveillance, autonomous weapons, cyber operations, propaganda, and command and control systems. Some worry that an arms race between countries like the United States and China could lead to extreme dangers. To stay ahead, the countries may race to deploy advanced military AI systems that they do not fully understand or can control. We could see catastrophic accidents, such as a rapid, automated escalation involving cyber and nuclear weapons.</p>
+<p><strong>AI being used to create diseases or biological weapons</strong></p>
+<p>AI could help design or modify diseases, making them more contagious or lethal. Governments, private groups, or individuals could use these capabilities to create dangerous biological pathogens that could be used in biowarfare or bioterrorism.</p>
+<p><strong>Bias and discrimination in AI decision-making</strong></p>
+<p>Increasingly, AI is being used to make decisions that affect humans, such as in employment, justice, financial, and medical decision-making. AI has the potential to make less biased decisions than humans. But algorithms trained on biased data could lead to discrimination against certain groups. Also, AI may lack transparency such that human users do not understand what the AI is doing, or why it reaches certain decisions in specific cases.</p>
+<p><strong>Inaccurate decision-making by AI</strong></p>
+<p>Increasingly, AI is being used to make decisions that affect humans, such as in employment, justice, financial, and medical decision-making. However, the decisions made by an AI may be wrong. For example, it could make a mistake in diagnosing disease and recommending treatment, give bad financial advice, or cause a traffic accident when operating a self-driving car. Also, AI may lack transparency such that human users do not understand what the AI is doing, or why it reaches certain decisions in specific cases.</p>
+<p><strong>Erosion of human rights by AI</strong></p>
+<p>As AI technology becomes more integrated into society, some people are concerned about its impact on human rights. AI systems could erode human rights such as physical liberty, privacy, freedom of opinion and expression, the right to work and education.</p>
+<p><strong>Loss of human self-determination, autonomy, and dignity due to AI</strong></p>
+<p>The increasing integration of AI into many aspects of life could reduce human self-determination, autonomy, and dignity. As important decisions are increasingly made by AI, humans could lose accountability and oversight for those decisions. Over time, humans may lose important skills and eventually become dependent on AI systems they no longer understand.</p>
+</section>
+
+</section>
+</section>
+
+
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-Anderljung2023-cj" class="csl-entry" role="listitem">
+Anderljung, M., Barnhart, J., Korinek, A., Leung, J., O’Keefe, C., Whittlestone, J., Avin, S., Brundage, M., Bullock, J., Cass-Beggs, D., Chang, B., Collins, T., Fist, T., Hadfield, G., Hayes, A., Ho, L., Hooker, S., Horvitz, E., Kolt, N., … Wolf, K. (2023). <em>Frontier <span>AI</span> regulation: Managing emerging risks to public safety</em>. <a href="https://arxiv.org/abs/2307.03718">https://arxiv.org/abs/2307.03718</a>
+</div>
+<div id="ref-Dafoe2018-la" class="csl-entry" role="listitem">
+Dafoe, A. (2018). <em><span>AI</span> governance: Opportunity and theory of impact</em>. <a href="https://www.allandafoe.com/opportunity" class="uri">https://www.allandafoe.com/opportunity</a>; Centre for the Governance of AI.
+</div>
+<div id="ref-Davidson2023-kw" class="csl-entry" role="listitem">
+Davidson, T. (2023). <em>What a compute-centric framework says about takeoff speeds</em>. Open Philanthropy.
+</div>
+<div id="ref-Elsey2023-ik" class="csl-entry" role="listitem">
+Elsey, J., &amp; Moss, D. (2023). <em><span>US</span> public opinion of <span>AI</span> policy and risk</em>. Rethink Priorities.
+</div>
+<div id="ref-Gillespie2023-ag" class="csl-entry" role="listitem">
+Gillespie, N., Lockey, S., Curtis, C., Pool, J., &amp; Akbari, A. (2023). <em>Trust in artificial intelligence: A global study</em>. The University of Queensland; KPMG Australia.
+</div>
+<div id="ref-Grace2022-iv" class="csl-entry" role="listitem">
+Grace, K., Stein-Perlman, Z., Weinstein-Raun, B., &amp; Salvatier, J. (2022). <em>2022 expert survey on progress in <span>AI</span></em>. AI Impacts.
+</div>
+<div id="ref-Lockey2020-ts" class="csl-entry" role="listitem">
+Lockey, S., Gillespie, N., &amp; Curtis, C. (2020). <em>Trust in artificial intelligence: Australian insights</em>.
+</div>
+<div id="ref-Maslej2023-bz" class="csl-entry" role="listitem">
+Maslej, N., Fattorini, L., Brynjolfsson, E., Etchemendy, J., Ligett, K., Lyons, T., Manyika, J., Ngo, H., Niebles, J. C., Parli, V., Shoham, Y., Wald, R., Clark, J., &amp; Perrault, R. (2023). <em>Artificial intelligence index report 2023</em>. <a href="https://arxiv.org/abs/2310.03715">https://arxiv.org/abs/2310.03715</a>
+</div>
+<div id="ref-noauthor_2023-kp" class="csl-entry" role="listitem">
+<em>Pause giant <span>AI</span> experiments: An open letter</em>. (2023). <a href="https://futureoflife.org/open-letter/pause-giant-ai-experiments/" class="uri">https://futureoflife.org/open-letter/pause-giant-ai-experiments/</a>.
+</div>
+<div id="ref-noauthor_2024-mp" class="csl-entry" role="listitem">
+<em>Safe and responsible <span>AI</span> in australia consultation: Australian government’s interim response</em>. (2024). Department of Industry, Science,; Resources.
+</div>
+<div id="ref-Selwyn2020-rk" class="csl-entry" role="listitem">
+Selwyn, N., Cordoba, B. G., Andrejevic, M., &amp; Campbell, L. (2020). <em><span>AI</span> for social good - australian attitudes toward <span>AI</span> and society report.pdf</em>. Monash University.
+</div>
+<div id="ref-noauthor_2023-sk" class="csl-entry" role="listitem">
+<em>The <span>AI</span> policy institute (<span>AIPI)/YouGov</span> survey of <span>US</span> voters about <span>AI</span></em>. (2023). The AI Policy Institute; YouGov.
+</div>
+<div id="ref-Weil2024-wm" class="csl-entry" role="listitem">
+Weil, G. (2024). <em>Tort law as a tool for mitigating catastrophic risk from artificial intelligence</em>.
+</div>
+<div id="ref-YouGov2023-zx" class="csl-entry" role="listitem">
+YouGov. (2023). <em><span>YouGov</span> survey: Identifying <span>AI</span></em>. YouGov.
+</div>
+<div id="ref-noauthor_2023-dy" class="csl-entry" role="listitem">
+<em><span>YouGov</span> survey: <span>AI</span> and the end of humanity</em>. (2023). YouGov.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Full text of the question: “Some technology leaders recently signed an open letter calling on AI labs to pause development of certain large-scale AI systems for at least six months worldwide. They cited fears of the ‘profound risks to society and humanity’. They argue we can use this time to better understand these AI systems and put safety measures in place. Other technology leaders have argued that such concerns are overblown, and such a pause is unnecessary. They argue that such a pause would only hold us back from getting the benefits of developments in AI. How much would you support/oppose pausing the development of large-scale AI systems for at least 6 months worldwide?”<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This number is determined by taking the numerical midpoint of each response (e.g., Somewhat unlikely: 20-40% chance → 30%) and averaging them. We coded responses that AI is already more intelligent people as 100%.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

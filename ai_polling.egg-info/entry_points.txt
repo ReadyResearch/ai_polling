@@ -1,0 +1,2 @@
+[console_scripts]
+ai-polling = ai_polling.cli:app

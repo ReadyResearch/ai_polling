@@ -1,0 +1,15 @@
+metric,value
+total_questions,2419.0
+unique_organizations,17.0
+unique_countries,58.0
+mean_agreement,50.303024453024456
+median_agreement,51.0
+min_agreement,0.13
+max_agreement,98.0
+count_ai_knowledge,389.0
+count_ai_sentiment,794.0
+count_ai_risk_concern,358.0
+count_ai_regulation,432.0
+count_other,211.0
+count_extinction_risk,29.0
+count_job_displacement,206.0

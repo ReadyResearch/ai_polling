@@ -1,0 +1,17 @@
+Section,Description
+PURPOSE,Top 100 AI polling questions for stakeholder sharing and policy advocacy
+SELECTION CRITERIA - Policy advocacy,Questions about AI regulation and governance
+SELECTION CRITERIA - Newsworthy content,"AI risks, job displacement, public concerns"
+SELECTION CRITERIA - Australian relevance,All SARA2024 questions included for baseline tracking
+SELECTION CRITERIA - Reputable sources,"Excluded ControlAI-funded polls, prioritized academic/government sources"
+SELECTION CRITERIA - Representative sampling,One question per semantic group to avoid redundancy
+SCORING - Strategic Value,3-10 points based on question type and policy relevance
+SCORING - Country Relevance,"5-10 points: Australia=10, US=9, UK=8, etc."
+SCORING - Recency Score,"2-5 points: 2024=5, 2023=4, 2022=3, etc."
+SCORING - Sample Quality,1-5 points based on sample size
+SOURCES - SARA2024,University of Queensland (Australian baseline)
+SOURCES - High Reputable,"Ada Lovelace Institute, UK Government, RAND, Pew, Ipsos"
+SOURCES - Excluded,YouGov polls funded by ControlAI due to perceived bias
+USAGE - Ranking,Questions ranked 1-100 by total score
+USAGE - Strategic Context,Use Strategic Context column to understand advocacy value
+USAGE - Data span,Data spans 2022-2024 with focus on recent surveys

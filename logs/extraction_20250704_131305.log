@@ -1,0 +1,8 @@
+[2025-07-04 13:13:05] INFO: Starting polling data extraction pipeline 
+[2025-07-04 13:13:05] INFO: Found 16 markdown files to process 
+[2025-07-04 13:13:05] INFO: Processing file: polling_markdown/ada_lovelace_2024.md 
+[2025-07-04 13:13:05] WARN: Large file detected: ada_lovelace_2024.md - truncating 
+[2025-07-04 13:13:05] INFO: Making API request for ada_lovelace_2024.md - attempt 1 
+[2025-07-04 13:14:25] ERROR: API request error for ada_lovelace_2024.md : missing value where TRUE/FALSE needed 
+[2025-07-04 13:14:25] INFO: Retrying in 2 seconds... 
+[2025-07-04 13:14:27] INFO: Making API request for ada_lovelace_2024.md - attempt 1 

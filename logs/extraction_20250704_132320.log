@@ -1,0 +1,16 @@
+[2025-07-04 13:23:20] INFO: Starting polling data extraction pipeline 
+[2025-07-04 13:23:20] INFO: Found 16 markdown files to process 
+[2025-07-04 13:23:20] INFO: Processing file: polling_markdown/ada_lovelace_2024.md 
+[2025-07-04 13:23:20] INFO: Using cached data for ada_lovelace_2024.md 
+[2025-07-04 13:23:20] INFO: Loaded from cache: cache/b0dea92a90947f2ec73b7306405f7c4f.rds 
+[2025-07-04 13:23:20] INFO: Processing file: polling_markdown/ai_impacts_oct_2023.md 
+[2025-07-04 13:23:20] INFO: Using cached data for ai_impacts_oct_2023.md 
+[2025-07-04 13:23:20] INFO: Loaded from cache: cache/eafecda99683dedc42d7c3804dacb470.rds 
+[2025-07-04 13:23:20] INFO: Processing file: polling_markdown/gallup_apr_2024.md 
+[2025-07-04 13:23:20] INFO: Using cached data for gallup_apr_2024.md 
+[2025-07-04 13:23:20] INFO: Loaded from cache: cache/8a410b96f5b24bfae3b51a38aa10b86d.rds 
+[2025-07-04 13:23:20] INFO: Processing file: polling_markdown/harris_nov_2022.md 
+[2025-07-04 13:23:20] INFO: Using cached data for harris_nov_2022.md 
+[2025-07-04 13:23:20] INFO: Loaded from cache: cache/eb2afb7d56e0aaa697da70583f837216.rds 
+[2025-07-04 13:23:20] INFO: Processing file: polling_markdown/ipsos_nov_2021.md 
+[2025-07-04 13:23:20] INFO: Making API request for ipsos_nov_2021.md - attempt 1 

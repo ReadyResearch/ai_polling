@@ -1,0 +1,111 @@
+[2025-07-04 13:49:07] INFO: Starting polling data extraction pipeline 
+[2025-07-04 13:49:07] INFO: Found 33 markdown files to process 
+[2025-07-04 13:49:07] INFO: Processing file: polling_markdown/3m_sep_2021.md 
+[2025-07-04 13:49:07] INFO: Making API request for 3m_sep_2021.md - attempt 1 
+[2025-07-04 13:50:54] INFO: Raw API response length: 37063 
+[2025-07-04 13:50:54] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "I trust Science",
+    "Response_Scale": "Strongly agree, Somewhat agree, Neither agree nor disagree, Somewhat disagree, Strongly disagree",
+    "Category": "AI_Sent ... 
+[2025-07-04 13:50:54] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:50:54] INFO: Clean response length: 37051 
+[2025-07-04 13:50:54] INFO: Successfully extracted 57 records from 3m_sep_2021.md 
+[2025-07-04 13:50:54] INFO: Saved to cache: cache/a79b3bfdf346ac52b39466c91306b669.rds 
+[2025-07-04 13:50:54] INFO: Processing file: polling_markdown/ada_lovelace_2024.md 
+[2025-07-04 13:50:54] INFO: Using cached data for ada_lovelace_2024.md 
+[2025-07-04 13:50:54] INFO: Loaded from cache: cache/b0dea92a90947f2ec73b7306405f7c4f.rds 
+[2025-07-04 13:50:54] INFO: Processing file: polling_markdown/ada_lovelace_oct_2024.md 
+[2025-07-04 13:50:54] WARN: Large file detected: ada_lovelace_oct_2024.md - truncating 
+[2025-07-04 13:50:54] INFO: Making API request for ada_lovelace_oct_2024.md - attempt 1 
+[2025-07-04 13:52:00] INFO: Raw API response length: 22310 
+[2025-07-04 13:52:00] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "Had you heard of AI for driverless cars?",
+    "Response_Scale": "Yes, Not sure / Prefer not to say, No",
+    "Category": "Other",
+    "Agreement": 93,
+    "Neutral ... 
+[2025-07-04 13:52:00] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:52:00] INFO: Clean response length: 22298 
+[2025-07-04 13:52:00] INFO: Successfully extracted 30 records from ada_lovelace_oct_2024.md 
+[2025-07-04 13:52:00] INFO: Saved to cache: cache/4683d5fd5fb8c436f4d55446079828a6.rds 
+[2025-07-04 13:52:00] INFO: Processing file: polling_markdown/ai_impacts_oct_2023.md 
+[2025-07-04 13:52:00] WARN: Large file detected: ai_impacts_oct_2023.md - truncating 
+[2025-07-04 13:52:00] INFO: Making API request for ai_impacts_oct_2023.md - attempt 1 
+[2025-07-04 13:52:58] INFO: Raw API response length: 24454 
+[2025-07-04 13:52:58] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "To what extent do you think that you disagreed with the typical AI researcher about when High-Level Machine Intelligence (HLMI) would exist?",
+    "Response_Scale": ... 
+[2025-07-04 13:52:58] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:52:58] INFO: Clean response length: 24442 
+[2025-07-04 13:52:58] INFO: Successfully extracted 33 records from ai_impacts_oct_2023.md 
+[2025-07-04 13:52:58] INFO: Saved to cache: cache/eafecda99683dedc42d7c3804dacb470.rds 
+[2025-07-04 13:52:58] INFO: Processing file: polling_markdown/aipi_aug_2024.md 
+[2025-07-04 13:52:58] INFO: Making API request for aipi_aug_2024.md - attempt 1 
+[2025-07-04 13:53:39] INFO: Raw API response length: 10953 
+[2025-07-04 13:53:39] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "The US AI Safety Institute, housed within the National Institute of Standards and Technology (NIST), is a government initiative aimed at advancing the science and p ... 
+[2025-07-04 13:53:39] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:53:39] INFO: Clean response length: 10941 
+[2025-07-04 13:53:39] INFO: Successfully extracted 9 records from aipi_aug_2024.md 
+[2025-07-04 13:53:39] INFO: Saved to cache: cache/5cd15c74b57548fbb0657d14ffa32f8e.rds 
+[2025-07-04 13:53:39] INFO: Processing file: polling_markdown/aipi_jun_2024.md 
+[2025-07-04 13:53:39] INFO: Making API request for aipi_jun_2024.md - attempt 1 
+[2025-07-04 13:54:30] INFO: Raw API response length: 16616 
+[2025-07-04 13:54:30] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "Do you have a favorable or unfavorable opinion of the following institutions? Open AI",
+    "Response_Scale": "Favorable, Unfavorable, Not sure/Never Heard of",
+    ... 
+[2025-07-04 13:54:30] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:54:30] INFO: Clean response length: 16604 
+[2025-07-04 13:54:30] INFO: Successfully extracted 23 records from aipi_jun_2024.md 
+[2025-07-04 13:54:30] INFO: Saved to cache: cache/e8a41115a420399d4994596c6157be44.rds 
+[2025-07-04 13:54:30] INFO: Processing file: polling_markdown/aipi_nov_2024.md 
+[2025-07-04 13:54:30] INFO: Making API request for aipi_nov_2024.md - attempt 1 
+[2025-07-04 13:55:28] INFO: Raw API response length: 17054 
+[2025-07-04 13:55:28] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "Some policy makers are suggesting that the Trump administration should make it easier to build infrastructure for large AI models. What do you think?",
+    "Respons ... 
+[2025-07-04 13:55:28] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:55:28] INFO: Clean response length: 17042 
+[2025-07-04 13:55:28] INFO: Successfully extracted 19 records from aipi_nov_2024.md 
+[2025-07-04 13:55:28] INFO: Saved to cache: cache/2dfc75d9e94c46df3cf68b656cae1ea9.rds 
+[2025-07-04 13:55:28] INFO: Processing file: polling_markdown/gallup_apr_2024.md 
+[2025-07-04 13:55:28] INFO: Making API request for gallup_apr_2024.md - attempt 1 
+[2025-07-04 13:56:25] INFO: Raw API response length: 24232 
+[2025-07-04 13:56:25] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "In your opinion, which of the following best describes the impact businesses have on… People’s lives",
+    "Response_Scale": "Extremely positive impact, Somewhat po ... 
+[2025-07-04 13:56:25] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:56:25] INFO: Clean response length: 24220 
+[2025-07-04 13:56:25] INFO: Successfully extracted 32 records from gallup_apr_2024.md 
+[2025-07-04 13:56:25] INFO: Saved to cache: cache/8a410b96f5b24bfae3b51a38aa10b86d.rds 
+[2025-07-04 13:56:25] INFO: Processing file: polling_markdown/harris_nov_2022.md 
+[2025-07-04 13:56:25] INFO: Making API request for harris_nov_2022.md - attempt 1 
+[2025-07-04 13:57:14] INFO: Raw API response length: 13792 
+[2025-07-04 13:57:14] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "I would rely on AI for everyday tasks.",
+    "Response_Scale": "Strongly Agree, Somewhat Agree, Neither Agree Nor Disagree, Somewhat Disagree, Strongly Disagree",
+  ... 
+[2025-07-04 13:57:14] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:57:14] INFO: Clean response length: 13780 
+[2025-07-04 13:57:14] INFO: Successfully extracted 20 records from harris_nov_2022.md 
+[2025-07-04 13:57:14] INFO: Saved to cache: cache/eb2afb7d56e0aaa697da70583f837216.rds 
+[2025-07-04 13:57:14] INFO: Processing file: polling_markdown/ipsos_april_2024.md 
+[2025-07-04 13:57:14] WARN: Large file detected: ipsos_april_2024.md - truncating 
+[2025-07-04 13:57:14] INFO: Making API request for ipsos_april_2024.md - attempt 1 

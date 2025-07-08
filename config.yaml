@@ -1,0 +1,97 @@
+# AI Polling Pipeline Configuration
+
+api:
+  google_api_key: ${GOOGLE_API_KEY}  # Set from environment variable
+  model_name: "gemini-2.5-flash"
+  thinking_budget: 4000
+
+extraction:
+  batch_size: 5
+  retry_attempts: 3
+  rate_limit_delay: 2.0
+  max_output_tokens: 65536
+  temperature: 0.0
+
+output:
+  google_sheet_id: "1FqAiXwrS3rvPfqOltxO5CTNxfdjFKMc6FLWFMw6UkcE"
+  sheet_tab_name: "Poll Results"
+  r_output_dir: "extracted_data"
+  cache_dir: "cache"
+
+categories:
+  ai_regulation_keywords:
+    - "regulation"
+    - "oversight" 
+    - "governance"
+    - "government"
+    - "federal"
+    - "testing"
+    - "safety standards"
+    - "approval"
+    - "licensed"
+    - "regulated"
+    - "international cooperation"
+    - "global coordination"
+    - "regulatory framework"
+    - "compliance"
+    - "monitoring"
+    - "audit"
+    - "certification"
+    - "standards"
+    - "policy"
+    - "law"
+    - "legal"
+    - "institute"
+    - "agency"
+    - "authority"
+
+  ai_risk_keywords:
+    - "risk"
+    - "danger"
+    - "harm" 
+    - "threat"
+    - "worry"
+    - "concern"
+    - "afraid"
+    - "negative effects"
+    - "problems"
+    - "issues"
+    - "catastrophic"
+    - "dangerous"
+    - "harmful"
+    - "worried"
+    - "concerned"
+    - "fearful"
+    - "anxious"
+    - "nervous"
+
+  extinction_risk_keywords:
+    - "extinction"
+    - "end of humanity"
+    - "human race"
+    - "civilization"
+    - "existential"
+    - "species"
+    - "survival"
+    - "apocalypse"
+    - "catastrophic risk"
+    - "x-risk"
+    - "global catastrophe"
+    - "human extinction"
+    - "end of the world"
+
+  job_displacement_keywords:
+    - "job"
+    - "employment"
+    - "work"
+    - "unemployment"
+    - "displaced"
+    - "replace workers"
+    - "automation"
+    - "career"
+    - "profession"
+    - "labor"
+    - "workforce"
+    - "jobs lost"
+    - "unemployment"
+    - "layoffs"

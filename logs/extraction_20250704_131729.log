@@ -1,0 +1,56 @@
+[2025-07-04 13:17:29] INFO: Starting polling data extraction pipeline 
+[2025-07-04 13:17:29] INFO: Found 16 markdown files to process 
+[2025-07-04 13:17:29] INFO: Processing file: polling_markdown/ada_lovelace_2024.md 
+[2025-07-04 13:17:29] WARN: Large file detected: ada_lovelace_2024.md - truncating 
+[2025-07-04 13:17:29] INFO: Making API request for ada_lovelace_2024.md - attempt 1 
+[2025-07-04 13:18:27] INFO: Raw API response length: 21909 
+[2025-07-04 13:18:27] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "Before today, had you heard of AI for driverless cars?",
+    "Response_Scale": "Yes, Not sure / Prefer not to say, No",
+    "Category": "AI_Sentiment",
+    "Agreeme ... 
+[2025-07-04 13:18:27] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:18:27] INFO: Clean response length: 21897 
+[2025-07-04 13:18:27] INFO: Successfully extracted 22 records from ada_lovelace_2024.md 
+[2025-07-04 13:18:27] INFO: Saved to cache: cache/b0dea92a90947f2ec73b7306405f7c4f.rds 
+[2025-07-04 13:18:27] INFO: Processing file: polling_markdown/ai_impacts_oct_2023.md 
+[2025-07-04 13:18:27] WARN: Large file detected: ai_impacts_oct_2023.md - truncating 
+[2025-07-04 13:18:27] INFO: Making API request for ai_impacts_oct_2023.md - attempt 1 
+[2025-07-04 13:19:09] INFO: Raw API response length: 8317 
+[2025-07-04 13:19:09] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "To what extent do you think that you disagreed with the typical AI researcher about when High-Level Machine Intelligence (HLMI) would exist?",
+    "Response_Scale": ... 
+[2025-07-04 13:19:09] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:19:09] INFO: Clean response length: 8305 
+[2025-07-04 13:19:09] INFO: Successfully extracted 11 records from ai_impacts_oct_2023.md 
+[2025-07-04 13:19:09] INFO: Saved to cache: cache/eafecda99683dedc42d7c3804dacb470.rds 
+[2025-07-04 13:19:09] INFO: Processing file: polling_markdown/gallup_apr_2024.md 
+[2025-07-04 13:19:09] INFO: Making API request for gallup_apr_2024.md - attempt 1 
+[2025-07-04 13:20:20] INFO: Raw API response length: 18483 
+[2025-07-04 13:20:20] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "In your opinion, which of the following best describes the impact businesses have on… People’s lives",
+    "Response_Scale": "Extremely positive, Somewhat positive, ... 
+[2025-07-04 13:20:20] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:20:20] INFO: Clean response length: 18471 
+[2025-07-04 13:20:20] INFO: Successfully extracted 24 records from gallup_apr_2024.md 
+[2025-07-04 13:20:20] INFO: Saved to cache: cache/8a410b96f5b24bfae3b51a38aa10b86d.rds 
+[2025-07-04 13:20:20] INFO: Processing file: polling_markdown/harris_nov_2022.md 
+[2025-07-04 13:20:20] INFO: Making API request for harris_nov_2022.md - attempt 1 
+[2025-07-04 13:21:24] INFO: Raw API response length: 15371 
+[2025-07-04 13:21:24] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "How much do you agree or disagree with each of the following statements about artificial intelligence? AI is safe and secure.",
+    "Response_Scale": "Strongly agre ... 
+[2025-07-04 13:21:24] INFO: Extracted JSON from markdown code block 
+[2025-07-04 13:21:24] INFO: Clean response length: 15359 
+[2025-07-04 13:21:24] INFO: Successfully extracted 19 records from harris_nov_2022.md 
+[2025-07-04 13:21:24] INFO: Saved to cache: cache/eb2afb7d56e0aaa697da70583f837216.rds 
+[2025-07-04 13:21:24] INFO: Processing file: polling_markdown/ipsos_nov_2021.md 
+[2025-07-04 13:21:24] INFO: Making API request for ipsos_nov_2021.md - attempt 1 

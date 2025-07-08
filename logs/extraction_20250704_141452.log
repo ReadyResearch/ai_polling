@@ -1,0 +1,118 @@
+[2025-07-04 14:14:52] INFO: Starting polling data extraction pipeline 
+[2025-07-04 14:14:52] INFO: Found 33 markdown files to process 
+[2025-07-04 14:14:52] INFO: Processing file: polling_markdown/3m_sep_2021.md 
+[2025-07-04 14:14:52] INFO: Using cached data for 3m_sep_2021.md 
+[2025-07-04 14:14:52] INFO: Loaded from cache: cache/a79b3bfdf346ac52b39466c91306b669.rds 
+[2025-07-04 14:14:52] INFO: Processing file: polling_markdown/ada_lovelace_2024.md 
+[2025-07-04 14:14:52] INFO: Using cached data for ada_lovelace_2024.md 
+[2025-07-04 14:14:52] INFO: Loaded from cache: cache/b0dea92a90947f2ec73b7306405f7c4f.rds 
+[2025-07-04 14:14:52] INFO: Processing file: polling_markdown/ada_lovelace_oct_2024.md 
+[2025-07-04 14:14:52] INFO: Using cached data for ada_lovelace_oct_2024.md 
+[2025-07-04 14:14:52] INFO: Loaded from cache: cache/4683d5fd5fb8c436f4d55446079828a6.rds 
+[2025-07-04 14:14:52] INFO: Processing file: polling_markdown/ai_impacts_oct_2023.md 
+[2025-07-04 14:14:52] INFO: Using cached data for ai_impacts_oct_2023.md 
+[2025-07-04 14:14:52] INFO: Loaded from cache: cache/eafecda99683dedc42d7c3804dacb470.rds 
+[2025-07-04 14:14:52] INFO: Processing file: polling_markdown/aipi_aug_2024.md 
+[2025-07-04 14:14:52] INFO: Using cached data for aipi_aug_2024.md 
+[2025-07-04 14:14:52] INFO: Loaded from cache: cache/5cd15c74b57548fbb0657d14ffa32f8e.rds 
+[2025-07-04 14:14:52] INFO: Processing file: polling_markdown/aipi_jun_2024.md 
+[2025-07-04 14:14:52] INFO: Using cached data for aipi_jun_2024.md 
+[2025-07-04 14:14:52] INFO: Loaded from cache: cache/e8a41115a420399d4994596c6157be44.rds 
+[2025-07-04 14:14:52] INFO: Processing file: polling_markdown/aipi_nov_2024.md 
+[2025-07-04 14:14:52] INFO: Using cached data for aipi_nov_2024.md 
+[2025-07-04 14:14:52] INFO: Loaded from cache: cache/2dfc75d9e94c46df3cf68b656cae1ea9.rds 
+[2025-07-04 14:14:52] INFO: Processing file: polling_markdown/gallup_apr_2024.md 
+[2025-07-04 14:14:52] INFO: Using cached data for gallup_apr_2024.md 
+[2025-07-04 14:14:52] INFO: Loaded from cache: cache/8a410b96f5b24bfae3b51a38aa10b86d.rds 
+[2025-07-04 14:14:52] INFO: Processing file: polling_markdown/harris_nov_2022.md 
+[2025-07-04 14:14:52] INFO: Using cached data for harris_nov_2022.md 
+[2025-07-04 14:14:52] INFO: Loaded from cache: cache/eb2afb7d56e0aaa697da70583f837216.rds 
+[2025-07-04 14:14:52] INFO: Processing file: polling_markdown/ipsos_april_2024.md 
+[2025-07-04 14:14:52] WARN: Large file detected: ipsos_april_2024.md - truncating 
+[2025-07-04 14:14:52] INFO: Making API request for ipsos_april_2024.md - attempt 1 
+[2025-07-04 14:18:34] INFO: Raw API response length: 165917 
+[2025-07-04 14:18:34] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "I have a good understanding of what artificial intelligence is",
+    "Response_Scale": "Agree, Neither agree nor disagree, Disagree",
+    "Category": "AI_Sentiment" ... 
+[2025-07-04 14:18:34] WARN: Failed to extract from JSON code block, using raw response 
+[2025-07-04 14:18:34] INFO: Clean response length: 165917 
+[2025-07-04 14:18:34] ERROR: JSON parsing failed: lexical error: invalid char in json text.
+                                       ```json [   {     "Question_Tex
+                     (right here) ------^
+ 
+[2025-07-04 14:18:34] ERROR: Raw response: ```json
+[
+  {
+    "Question_Text": "I have a good understanding of what artificial intelligence is",
+    "Response_Scale": "Agree, Neither agree nor disagree, Disagree",
+    "Category": "AI_Sentiment",
+    "Agreement": 67,
+    "Neutral": 8,
+    "Disagreement": 25,
+    "N_Respondents": 23685,
+    "Country": "Global Country Average",
+    "Survey_Organisation": "Ipsos",
+    "Fieldwork_Date": "2024-04-19 to 2024-05-03",
+    "Notes": "Base for overall survey: 23,685 online adults under age 75 across  
+[2025-07-04 14:18:34] INFO: Successfully extracted 0 records from ipsos_april_2024.md 
+[2025-07-04 14:18:34] INFO: Saved to cache: cache/9eb1ed8d4bf482c3df354f915f52548d.rds 
+[2025-07-04 14:18:34] INFO: Processing file: polling_markdown/ipsos_mar_2024.md 
+[2025-07-04 14:18:34] INFO: Making API request for ipsos_mar_2024.md - attempt 1 
+[2025-07-04 14:19:18] INFO: Raw API response length: 8637 
+[2025-07-04 14:19:18] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "Which of the following best describes your knowledge of AI?",
+    "Response_Scale": "Know a lot about AI, Know a fair amount about AI, Know a little about AI, Have  ... 
+[2025-07-04 14:19:18] INFO: Extracted JSON from markdown code block 
+[2025-07-04 14:19:18] INFO: Clean response length: 8625 
+[2025-07-04 14:19:18] INFO: Successfully extracted 20 records from ipsos_mar_2024.md 
+[2025-07-04 14:19:18] INFO: Saved to cache: cache/4381176de48b8f1aa55be19c265e2a55.rds 
+[2025-07-04 14:19:18] INFO: Processing file: polling_markdown/ipsos_may_2023_global.md 
+[2025-07-04 14:19:18] INFO: Making API request for ipsos_may_2023_global.md - attempt 1 
+[2025-07-04 14:22:36] INFO: Raw API response length: 162231 
+[2025-07-04 14:22:36] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "I have a good understanding of what artificial intelligence is",
+    "Response_Scale": "Very much agree, Somewhat agree, Neither agree nor disagree, Somewhat disagr ... 
+[2025-07-04 14:22:36] WARN: Failed to extract from JSON code block, using raw response 
+[2025-07-04 14:22:36] INFO: Clean response length: 162231 
+[2025-07-04 14:22:36] ERROR: JSON parsing failed: lexical error: invalid char in json text.
+                                       ```json [   {     "Question_Tex
+                     (right here) ------^
+ 
+[2025-07-04 14:22:36] ERROR: Raw response: ```json
+[
+  {
+    "Question_Text": "I have a good understanding of what artificial intelligence is",
+    "Response_Scale": "Very much agree, Somewhat agree, Neither agree nor disagree, Somewhat disagree, Very much disagree",
+    "Category": "Other",
+    "Agreement": 67,
+    "Neutral": 0,
+    "Disagreement": 0,
+    "N_Respondents": 22816,
+    "Country": "Global Country Average",
+    "Survey_Organisation": "Ipsos",
+    "Fieldwork_Date": "2023-05-26 to 2023-06-09",
+    "Notes": "Only 'Agree (very/s 
+[2025-07-04 14:22:36] INFO: Successfully extracted 0 records from ipsos_may_2023_global.md 
+[2025-07-04 14:22:36] INFO: Saved to cache: cache/810585c14d8b34498c544031896f54e0.rds 
+[2025-07-04 14:22:36] INFO: Processing file: polling_markdown/ipsos_may_2023_us.md 
+[2025-07-04 14:22:36] WARN: Large file detected: ipsos_may_2023_us.md - truncating 
+[2025-07-04 14:22:36] INFO: Making API request for ipsos_may_2023_us.md - attempt 1 
+[2025-07-04 14:23:27] INFO: Raw API response length: 14657 
+[2025-07-04 14:23:27] INFO: Response preview: ```json
+[
+  {
+    "Question_Text": "Are you currently registered to vote at your current address, or not?",
+    "Response_Scale": "No, not registered to vote at my current address, Yes, registered to  ... 
+[2025-07-04 14:23:27] INFO: Extracted JSON from markdown code block 
+[2025-07-04 14:23:27] INFO: Clean response length: 14645 
+[2025-07-04 14:23:27] INFO: Successfully extracted 25 records from ipsos_may_2023_us.md 
+[2025-07-04 14:23:27] INFO: Saved to cache: cache/11b5b7bf2a9de79e73ffe8a06693ab57.rds 
+[2025-07-04 14:23:27] INFO: Processing file: polling_markdown/ipsos_nov_2021.md 
+[2025-07-04 14:23:27] INFO: Making API request for ipsos_nov_2021.md - attempt 1 
