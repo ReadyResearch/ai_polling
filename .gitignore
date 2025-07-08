@@ -47,3 +47,12 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Environment variables and API keys
+.env
+.env.local
+.env.production
+.env.staging
+
+# Claude Code settings
+.claude/
