@@ -1,14 +1,9 @@
 # AI Polling Data Extraction Pipeline
-
-<div align="center">
+---
 
 ## 📊 [**VIEW INTERACTIVE VISUALIZATIONS**](visualizations_grouped/index.html) 📊
 
 *Click above to explore AI public opinion trends across 40+ countries and 1000+ polling questions*
-
----
-
-</div>
 
 A modern Python pipeline for extracting and analyzing AI public opinion polling data from PDFs and documents.
 
