@@ -115,10 +115,48 @@ create_group_visualization <- function(group_name, data) {
     ) %>%
     pull(weighted_agreement)
   
-  # NO AGGREGATION - Each question is a separate point
+  # CRITICAL CHANGE: Create hover data BEFORE aggregation
+  # This ensures we have the full question text for each point
   hover_data <- group_data %>%
     select(country_clean, fieldwork_date, agreement, neutral, disagreement,
            n_respondents, survey_organisation, question_text_escaped) %>%
+    group_by(country_clean, fieldwork_date) %>%
+    # For each country-date combination, aggregate the data
+    summarise(
+      agreement = mean(agreement, na.rm = TRUE),
+      neutral = mean(neutral, na.rm = TRUE),
+      disagreement = mean(disagreement, na.rm = TRUE),
+      n_questions = n(),
+      n_surveys = n_distinct(survey_organisation),
+      total_sample_size = sum(n_respondents, na.rm = TRUE),
+      organizations = paste(unique(survey_organisation), collapse = "; "),
+      # Combine all question texts
+      questions_list = list(unique(question_text_escaped)),
+      .groups = "drop"
+    ) %>%
+    # Create hover text for each point
+    mutate(
+      hover_text = map_chr(questions_list, function(q_list) {
+        questions_formatted <- paste(q_list, collapse = "\n\n")
+        # Truncate if too long but keep full questions when possible
+        if (nchar(questions_formatted) > 800) {
+          questions_formatted <- paste0(
+            substr(questions_formatted, 1, 800),
+            "...\n[", length(q_list), " questions total]"
+          )
+        }
+        questions_formatted
+      }),
+      # Create the full hover content
+      hover_content = paste0(
+        "Questions: ", n_questions, "<br>",
+        "Surveys: ", n_surveys, "<br>",
+        "Orgs: ", str_trunc(organizations, 50), "<br>",
+        "Sample: ", format(total_sample_size, big.mark = ","), "<br><br>",
+        "<b>Survey Questions:</b><br>",
+        gsub("\n", "<br>", hover_text)
+      )
+    ) %>%
     arrange(fieldwork_date) %>%
     filter(!is.na(agreement), agreement >= 0, agreement <= 100)
   
@@ -169,20 +207,20 @@ create_group_visualization <- function(group_name, data) {
       arrange(fieldwork_date)
     
     if (nrow(country_data) >= 1) {
-      # Calculate marker sizes based on sample size
-      marker_sizes <- pmax(6, pmin(20, 6 + (country_data$n_respondents / 500)))
+      # Calculate marker sizes
+      marker_sizes <- pmax(6, pmin(20, 6 + (country_data$total_sample_size / 500)))
       
-      # Create hover text for each individual question
+      # Create hover text as a simple vector
       hover_text_vec <- paste0(
         "<b>", country, "</b><br>",
         "Date: ", format(country_data$fieldwork_date, "%B %Y"), "<br>",
         "Agreement: ", round(country_data$agreement, 1), "%<br>",
-        "Neutral: ", round(country_data$neutral, 1), "%<br>",
-        "Disagreement: ", round(country_data$disagreement, 1), "%<br>",
-        "Sample Size: ", format(country_data$n_respondents, big.mark = ","), "<br>",
-        "Organization: ", country_data$survey_organisation, "<br><br>",
-        "<b>Question:</b><br>",
-        str_wrap(country_data$question_text_escaped, width = 80)
+        "Sample Size: ", format(country_data$total_sample_size, big.mark = ","), "<br>",
+        "Questions: ", country_data$n_questions, "<br>",
+        "Surveys: ", country_data$n_surveys, "<br>",
+        "Organizations: ", str_trunc(country_data$organizations, 50), "<br><br>",
+        "<b>Survey Questions:</b><br>",
+        gsub("\n", "<br>", country_data$hover_text)
       )
       
       p <- p %>%
@@ -224,7 +262,7 @@ create_group_visualization <- function(group_name, data) {
   }
   
   # Add sample question as annotation
-  sample_q <- hover_data$question_text_escaped[1]
+  sample_q <- hover_data$questions_list[[1]][1]
   if (!is.null(sample_q) && !is.na(sample_q)) {
     p <- p %>%
       layout(
