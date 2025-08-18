@@ -11,14 +11,6 @@ A modern Python pipeline for extracting and analyzing AI public opinion polling 
 
 This pipeline extracts polling questions from research documents, validates the data, and exports it to Google Sheets and R-friendly formats for analysis. Built with type safety, robust error handling, and modern Python practices.
 
-## Strategic Objective
-
-Build compelling evidence for stronger AI regulation by visualizing public opinion trends that demonstrate:
-- 60-80% consistent global support for AI regulation
-- Growing concern about AI risks over time  
-- Cross-national consistency in regulatory preferences
-- Methodological robustness across different survey approaches
-
 ## Features
 
 - **Type-safe extraction** with Pydantic models
@@ -257,7 +249,7 @@ ai-polling config --edit
 
 The project includes interactive visualizations of the polling data:
 
-- **Live Demo**: [View visualizations](https://michaelnoetel.github.io/ai_polling/visualizations_grouped/) *(if repo is public)*
+- **Live Demo**: [View visualizations](https://readyresearch.github.io/ai_polling/visualizations_grouped/) *(if repo is public)*
 - **Local Access**: Open `visualizations_grouped/index.html` in your browser
 - **Overview Dashboard**: Comprehensive interactive dashboard with all question categories
 - **Individual Topics**: Separate visualizations for each question category (AI regulation, risks, job displacement, etc.)
