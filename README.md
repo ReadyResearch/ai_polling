@@ -1,7 +1,7 @@
 # AI Polling Data Extraction Pipeline
 ---
 
-## 📊 [**VIEW INTERACTIVE VISUALIZATIONS**](visualizations_grouped/index.html) 📊
+## 📊 [**VIEW INTERACTIVE VISUALIZATIONS**](https://readyresearch.github.io/ai_polling/visualizations_grouped/index.html) 📊
 
 *Click above to explore AI public opinion trends across 40+ countries and 1000+ polling questions*
 
