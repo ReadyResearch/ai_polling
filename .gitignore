@@ -56,3 +56,6 @@ rsconnect/
 
 # Claude Code settings
 .claude/
+
+# PDF files
+*.pdf
